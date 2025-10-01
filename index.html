@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>www.xyz.</title>
+  <title>www.xyz.com</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -13,15 +13,17 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Inter', Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-      color: #1a1a1a;
+      background: #121212; /* dark premium background */
+      color: #e0e0e0; /* light text for readability */
       text-align: center;
-      padding: 40px 20px 0 20px; /* top padding to separate from edge */
+      padding: 40px 20px 20px 20px;
+      min-height: 100vh;
     }
 
-    /* ---------- Title & Tagline ---------- */
+    /* ---------- Header ---------- */
     header {
       width: 100%;
       margin-bottom: 30px;
@@ -30,17 +32,22 @@
     .title {
       font-size: 4rem;
       font-weight: 700;
-      background: linear-gradient(90deg, #0f766e, #14b8a6);
+      background: linear-gradient(90deg, #00ff7f, #00b36b); /* green shiny gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
 
     .tagline {
       font-size: 1.3rem;
       font-weight: 500;
-      color: #555;
-      letter-spacing: 0.5px;
+      color: #cccccc;
       margin-top: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    header div {
+      padding: 10px 0;
     }
 
     /* ---------- Responsive ---------- */
@@ -61,6 +68,16 @@
         font-size: 0.95rem;
       }
     }
+
+    /* ---------- Body background shine effect ---------- */
+    body::before {
+      content: "";
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 70%);
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -70,8 +87,7 @@
   </header>
 
   <script>
-    console.log("Homepage loaded: www.xyz.com");
+    console.log("Homepage loaded: www.xyz.com - Dark Premium Theme with Green Title");
   </script>
 </body>
 </html>
-
