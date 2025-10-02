@@ -19,24 +19,10 @@
       color: var(--silver-light);
       line-height: 1.6;
 
-      /* Your PNG background image */
-      background: var(--black-base) url('images/my-background.png') no-repeat center center;
-      background-size: cover;
+      /* Black background only */
+      background: var(--black-base);
       position: relative;
       overflow-x: hidden;
-    }
-
-    /* Transparent overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      pointer-events: none;
-      z-index: -1;
     }
 
     /* Floating digital symbols */
@@ -60,7 +46,7 @@
 
     /* Header and navigation */
     header {
-      text-align: center; /* center everything */
+      text-align: center; /* center all header content */
       padding: 1rem 2%;
       background: rgba(0,255,0,0.02);
       box-shadow: inset 0 0 10px rgba(57,255,20,0.1);
@@ -83,10 +69,10 @@
     }
 
     nav {
-      display: flex;             /* flex container */
-      justify-content: center;   /* center the whole menu */
-      gap: 1rem;                 /* space between items */
-      margin: 0.5rem 0;          /* spacing from title/tagline */
+      display: flex;             /* horizontal menu */
+      justify-content: center;   /* center menu items horizontally */
+      gap: 2rem;                 /* spacing between items */
+      margin: 0.5rem 0;
       flex-wrap: wrap;           /* wrap on small screens */
     }
 
@@ -146,14 +132,13 @@
     /* Responsive adjustments */
     @media (max-width: 768px) {
       nav {
-        gap: 0.5rem;
+        gap: 1rem;
       }
     }
 
     @media (max-width: 480px) {
       nav {
-        flex-direction: column; /* stack menu on small screens */
-        gap: 0.3rem;
+        gap: 0.5rem;
       }
     }
   </style>
@@ -169,7 +154,7 @@
     <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
-      <a href="#">Services</a>
+      <a href="#">Product & Services</a>
       <a href="#">Contact</a>
     </nav>
   </header>
