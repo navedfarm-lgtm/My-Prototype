@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>www.xyz.com</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ---------- Reset & Basic Styles ---------- */
     * {
       margin: 0;
       padding: 0;
@@ -27,7 +25,6 @@
       overflow: hidden;
     }
 
-    /* Dark overlay for readability */
     body::before {
       content: "";
       position: absolute;
@@ -38,7 +35,6 @@
       z-index: -1;
     }
 
-    /* ---------- Header ---------- */
     header {
       width: 100%;
       margin-bottom: 20px;
@@ -47,7 +43,7 @@
     }
 
     .title {
-      font-size: 4rem;
+      font-size: 45px; /* changed */
       font-weight: 700;
       background: linear-gradient(90deg, #00ff7f, #00b36b);
       -webkit-background-clip: text;
@@ -56,14 +52,13 @@
     }
 
     .tagline {
-      font-size: 1.3rem;
+      font-size: 12px; /* changed */
       font-weight: 500;
       color: #ffffff;
       margin-top: 5px;
       letter-spacing: 0.5px;
     }
 
-    /* ---------- Navigation Menu ---------- */
     nav {
       margin-top: 20px;
     }
@@ -72,45 +67,36 @@
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: 30px; /* spacing between menu items */
-      flex-wrap: wrap; /* allows wrapping on small screens */
+      gap: 25px; /* spacing between menu items */
+      flex-wrap: nowrap; /* keep horizontal */
     }
 
     nav ul li a {
       text-decoration: none;
       color: #ffffff;
-      font-size: 1rem; /* standard font size */
+      font-size: 14px; /* changed */
       font-weight: 500;
       transition: color 0.3s;
+      white-space: nowrap; /* keep text in one line */
     }
 
     nav ul li a:hover {
-      color: #00ff7f; /* hover effect matching title gradient */
+      color: #00ff7f;
     }
 
-    /* ---------- Responsive ---------- */
-    @media (max-width: 768px) {
-      .title {
-        font-size: 3rem;
-      }
-      .tagline {
-        font-size: 1.1rem;
-      }
-      nav ul {
-        gap: 20px;
-      }
-    }
-
+    /* Adjust font sizes slightly on very small screens */
     @media (max-width: 480px) {
       .title {
-        font-size: 2.2rem;
+        font-size: 35px;
       }
       .tagline {
-        font-size: 0.95rem;
+        font-size: 11px;
       }
       nav ul {
-        flex-direction: column; /* stack menu on very small screens */
         gap: 15px;
+      }
+      nav ul li a {
+        font-size: 13px;
       }
     }
   </style>
@@ -125,13 +111,12 @@
         <li><a href="#">Product & Services</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
       </ul>
     </nav>
   </header>
 
   <script>
-    console.log("Homepage loaded: www.xyz.com - Dark Digital Theme with Menu");
+    console.log("Homepage loaded: www.xyz.com - Updated font sizes & menu");
   </script>
 </body>
 </html>
