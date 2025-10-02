@@ -3,85 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>www.xyz.com</title>
+  <title>Digital Learning Platform</title>
 
   <style>
-    /* === GLOBAL PAGE STYLES === */
+    :root {
+      --shiny-green: #39ff14;
+      --black-base: #000000;
+      --silver-light: #ccc;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #000; /* black premium theme */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
+      color: var(--silver-light);
+      line-height: 1.6;
+
+      /* Your PNG background image */
+      background: var(--black-base) url('images/my-background.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      overflow-x: hidden;
     }
 
-    /* === HEADER === */
+    /* Transparent overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Floating digital symbols */
+    .digital-symbols {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://svgshare.com/i/xC6.svg') repeat;
+      opacity: 0.05;
+      animation: floatSymbols 60s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes floatSymbols {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+
+    /* Header and navigation */
     header {
-      text-align: center;
-      padding-top: 30px;  /* space from top of page to logo */
-      padding-bottom: 25px;
+      text-align: center; /* center everything */
+      padding: 1rem 2%;
+      background: rgba(0,255,0,0.02);
+      box-shadow: inset 0 0 10px rgba(57,255,20,0.1);
+      position: relative;
+      z-index: 1;
     }
 
-    /* === LOGO === */
-    .logo {
-      max-width: 800px; /* increased logo width */
-      height: auto;     /* keep aspect ratio */
-      display: block;
-      margin: 0 auto;
+    header h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      margin: 0.3rem 0;
+      color: var(--shiny-green);
+      text-shadow: 0 0 8px rgba(57,255,20,0.6);
     }
 
-    /* === TAGLINE === */
-    .tagline {
-      font-size: 14px;   /* tagline text size */
-      margin-top: 15px;  /* space between logo and tagline */
-      color: #ffffff;
+    header p {
+      font-size: clamp(14px, 2vw, 18px);
+      margin: 0.2rem 0 0.5rem 0;
+      color: var(--silver-light);
+      text-shadow: 0 0 3px rgba(57,255,20,0.2);
     }
 
-    /* === NAVIGATION === */
     nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;         /* space between menu items */
-      margin-top: 20px;  /* space between tagline and menu */
+      display: flex;             /* flex container */
+      justify-content: center;   /* center the whole menu */
+      gap: 1rem;                 /* space between items */
+      margin: 0.5rem 0;          /* spacing from title/tagline */
+      flex-wrap: wrap;           /* wrap on small screens */
     }
 
     nav a {
       text-decoration: none;
-      font-size: 16px;   /* menu item font size */
-      color: #ffffff;
-      transition: color 0.3s ease;
+      color: var(--shiny-green);
+      font-size: clamp(14px, 2vw, 16px);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      background: rgba(0,255,0,0.05);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 5px rgba(57,255,20,0.2);
     }
 
     nav a:hover {
-      color: #00ff66; /* green hover effect */
+      color: #000;
+      background: var(--shiny-green);
+      box-shadow: 0 0 12px rgba(57,255,20,0.8);
     }
 
-    /* === RESPONSIVE (mobile) === */
-    @media (max-width: 600px) {
-      .logo {
-        max-width: 180px; /* smaller logo on mobile */
+    /* Main content */
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1.5rem 2%;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(57,255,20,0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    main h2 {
+      color: var(--shiny-green);
+      text-shadow: 0 0 6px rgba(57,255,20,0.5);
+      font-size: clamp(20px, 4vw, 28px);
+    }
+
+    main p {
+      font-size: clamp(14px, 2.5vw, 18px);
+      margin-top: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 2%;
+      font-size: clamp(12px, 2vw, 14px);
+      color: var(--silver-light);
+      border-top: 1px solid rgba(57,255,20,0.3);
+      background: rgba(0,0,0,0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav {
+        gap: 0.5rem;
       }
-      nav a {
-        font-size: 14px;  /* smaller menu text */
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column; /* stack menu on small screens */
+        gap: 0.3rem;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Floating symbols -->
+  <div class="digital-symbols"></div>
+
   <header>
-    <!-- Your uploaded logo -->
-    <img src="Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png" 
-     alt="www.xyz.com Logo" class="logo">
-
-    <p class="tagline">A No. 1 All-in-One Portal</p>
-
+    <h1>Digital Learning Platform</h1>
+    <p>Empowering AI Education and Digital Tools</p>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Products & Services</a>
       <a href="#">About</a>
+      <a href="#">Services</a>
       <a href="#">Contact</a>
     </nav>
   </header>
+
+  <main>
+    <h2>Welcome to Our Digital Hub</h2>
+    <p>Explore AI tools, online courses, and resources designed for modern learners. Our platform integrates education with technology to create an immersive learning experience.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Digital Learning Platform. All rights reserved.
+  </footer>
+
 </body>
 </html>
