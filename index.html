@@ -7,7 +7,6 @@
 
   <style>
     :root {
-      --shiny-green: #39ff14;
       --black-base: #000000;
       --silver-light: #ccc;
     }
@@ -18,8 +17,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--silver-light);
       line-height: 1.6;
-
-      /* Black background only */
       background: var(--black-base);
       position: relative;
       overflow-x: hidden;
@@ -46,8 +43,8 @@
 
     /* Header */
     header {
-      text-align: center; /* center all header content */
-      padding: 2rem 2% 1rem 2%; /* Top padding larger for logo spacing */
+      text-align: center;
+      padding: 2rem 2% 1rem 2%;
       background: rgba(0,255,0,0.02);
       box-shadow: inset 0 0 10px rgba(57,255,20,0.1);
       position: relative;
@@ -56,45 +53,51 @@
 
     /* Logo image */
     header img.logo {
-      max-width: 200px; /* adjust size as needed */
+      max-width: 200px;
       width: 30%;
       height: auto;
       display: block;
-      margin: 0 auto 1rem auto; /* bottom spacing from tagline */
+      margin: 0 auto 1rem auto;
     }
 
-    /* Tagline */
+    /* Tagline with shiny effect, letter spacing */
     header p {
       font-size: clamp(14px, 2vw, 18px);
-      margin: 0 0 1.5rem 0; /* spacing from menu */
-      color: var(--silver-light);
-      text-shadow: 0 0 3px rgba(57,255,20,0.2);
+      margin: 0 0 1.5rem 0;
+      color: #fff; /* white */
+      text-shadow:
+        0 0 4px rgba(255,255,255,0.4),
+        0 0 8px rgba(255,255,255,0.3),
+        0 0 12px rgba(255,255,255,0.2),
+        0 0 16px rgba(255,255,255,0.1);
+      font-weight: 600;
+      letter-spacing: 0.1em; /* slight stretch */
     }
 
     /* Navigation menu */
     nav {
-      display: flex;             /* horizontal menu */
-      justify-content: center;   /* center menu items horizontally */
-      gap: 2rem;                 /* space between items */
-      margin-bottom: 2rem;       /* spacing to main section */
-      flex-wrap: wrap;           /* wrap on small screens */
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
     }
 
     nav a {
       text-decoration: none;
-      color: var(--shiny-green);
+      color: #fff; /* changed from green to white */
       font-size: clamp(14px, 2vw, 16px);
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
-      background: rgba(0,255,0,0.05);
+      background: rgba(255,255,255,0.05); /* subtle white background */
       transition: all 0.3s ease;
-      box-shadow: 0 0 5px rgba(57,255,20,0.2);
+      box-shadow: 0 0 5px rgba(255,255,255,0.2);
     }
 
     nav a:hover {
       color: #000;
-      background: var(--shiny-green);
-      box-shadow: 0 0 12px rgba(57,255,20,0.8);
+      background: #fff; /* white hover */
+      box-shadow: 0 0 12px rgba(255,255,255,0.8);
     }
 
     /* Main content */
@@ -105,20 +108,21 @@
       text-align: center;
       background: rgba(0,0,0,0.6);
       border-radius: 8px;
-      box-shadow: 0 0 20px rgba(57,255,20,0.2);
+      box-shadow: 0 0 20px rgba(255,255,255,0.2); /* subtle white glow */
       position: relative;
       z-index: 1;
     }
 
     main h2 {
-      color: var(--shiny-green);
-      text-shadow: 0 0 6px rgba(57,255,20,0.5);
+      color: #fff; /* change to white for consistency */
+      text-shadow: 0 0 6px rgba(255,255,255,0.5);
       font-size: clamp(20px, 4vw, 28px);
     }
 
     main p {
       font-size: clamp(14px, 2.5vw, 18px);
       margin-top: 1rem;
+      color: var(--silver-light); /* keep paragraph as before */
     }
 
     /* Footer */
@@ -127,7 +131,7 @@
       padding: 1rem 2%;
       font-size: clamp(12px, 2vw, 14px);
       color: var(--silver-light);
-      border-top: 1px solid rgba(57,255,20,0.3);
+      border-top: 1px solid rgba(255,255,255,0.3);
       background: rgba(0,0,0,0.5);
       position: relative;
       z-index: 1;
@@ -155,13 +159,13 @@
   <header>
     <!-- Logo at top center -->
     <img src="logo.png" alt="Logo" class="logo">
-    <!-- Tagline -->
-    <p>Empowering AI Education and Digital Tools</p>
+    <!-- Tagline with shiny white effect and letter spacing -->
+    <p>A No.1 Online Digital Portal</p>
     <!-- Navigation menu -->
     <nav>
       <a href="#">Home</a>
-      <a href="#">About</a>
       <a href="#">Product & Services</a>
+      <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
   </header>
