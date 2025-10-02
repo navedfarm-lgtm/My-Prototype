@@ -16,7 +16,7 @@
       font-family: 'Inter', Arial, Helvetica, sans-serif;
       color: #e0e0e0;
       text-align: center;
-      padding: 40px 20px 20px 20px;
+      padding: 30px 20px 20px 20px; /* changed top padding from 40px to 30px */
       min-height: 100vh;
 
       background: #121212 url('https://images.unsplash.com/photo-1612831455541-45f34e3304a0?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
@@ -43,7 +43,7 @@
     }
 
     .title {
-      font-size: 45px; /* changed */
+      font-size: 40px; /* changed from 45px to 40px */
       font-weight: 700;
       background: linear-gradient(90deg, #00ff7f, #00b36b);
       -webkit-background-clip: text;
@@ -52,7 +52,7 @@
     }
 
     .tagline {
-      font-size: 12px; /* changed */
+      font-size: 12px;
       font-weight: 500;
       color: #ffffff;
       margin-top: 5px;
@@ -67,24 +67,23 @@
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: 25px; /* spacing between menu items */
+      gap: 25px; 
       flex-wrap: nowrap; /* keep horizontal */
     }
 
     nav ul li a {
       text-decoration: none;
       color: #ffffff;
-      font-size: 14px; /* changed */
+      font-size: 14px;
       font-weight: 500;
       transition: color 0.3s;
-      white-space: nowrap; /* keep text in one line */
+      white-space: nowrap;
     }
 
     nav ul li a:hover {
       color: #00ff7f;
     }
 
-    /* Adjust font sizes slightly on very small screens */
     @media (max-width: 480px) {
       .title {
         font-size: 35px;
@@ -114,9 +113,5 @@
       </ul>
     </nav>
   </header>
-
-  <script>
-    console.log("Homepage loaded: www.xyz.com - Updated font sizes & menu");
-  </script>
 </body>
 </html>
