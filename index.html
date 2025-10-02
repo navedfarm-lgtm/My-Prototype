@@ -4,48 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>www.xyz.com</title>
+
   <style>
-    /* --- GENERAL PAGE STYLES --- */
+    /* === GLOBAL PAGE STYLES === */
     body {
       margin: 0;
       padding: 0;
-      background-color: #000000; /* black premium theme */
+      background-color: #000; /* black premium theme */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
     }
 
-    /* --- HEADER --- */
+    /* === HEADER === */
     header {
       text-align: center;
-      padding: 25px 0;
+      padding-top: 50px;  /* space from top of page to logo */
+      padding-bottom: 25px;
     }
 
-    /* --- LOGO STYLING --- */
+    /* === LOGO === */
     .logo {
-      max-width: 220px; /* adjust size */
-      height: auto;
+      max-width: 350px; /* increased logo width */
+      height: auto;     /* keep aspect ratio */
       display: block;
       margin: 0 auto;
     }
 
-    /* --- OPTIONAL TAGLINE --- */
+    /* === TAGLINE === */
     .tagline {
-      font-size: 12px;
+      font-size: 14px;   /* tagline text size */
+      margin-top: 15px;  /* space between logo and tagline */
       color: #ffffff;
-      margin-top: 10px;
     }
 
-    /* --- NAVIGATION MENU --- */
+    /* === NAVIGATION === */
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 15px;
+      gap: 30px;         /* space between menu items */
+      margin-top: 20px;  /* space between tagline and menu */
     }
 
     nav a {
       text-decoration: none;
-      font-size: 14px;
+      font-size: 16px;   /* menu item font size */
       color: #ffffff;
       transition: color 0.3s ease;
     }
@@ -54,22 +57,25 @@
       color: #00ff66; /* green hover effect */
     }
 
-    /* --- RESPONSIVE --- */
+    /* === RESPONSIVE (mobile) === */
     @media (max-width: 600px) {
       .logo {
-        max-width: 150px;
+        max-width: 180px; /* smaller logo on mobile */
       }
       nav a {
-        font-size: 13px;
+        font-size: 14px;  /* smaller menu text */
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- LOGO only -->
-    <img src="Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png" alt="www.xyz.com Logo" class="logo">
+    <!-- Logo only (with transparent background) -->
+    <img src="Blue_Modern_Domain_Registrar_Business_Company_Logo-removebg-preview.png" 
+         alt="www.xyz.com Logo" class="logo">
+
     <p class="tagline">A No. 1 All-in-One Portal</p>
+
     <nav>
       <a href="#">Home</a>
       <a href="#">Products & Services</a>
