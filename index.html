@@ -12,39 +12,17 @@
     }
 
     body {
-      margin: 2px 0 0 0; /* page moved 2px down */
+      margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--silver-light);
       line-height: 1.6;
       background: var(--black-base);
-      position: relative;
-      overflow-x: hidden;
     }
 
-    /* Floating digital symbols */
-    .digital-symbols {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://svgshare.com/i/xC6.svg') repeat;
-      opacity: 0.05;
-      animation: floatSymbols 60s linear infinite;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    @keyframes floatSymbols {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
-    }
-
-    /* Header */
     header {
       text-align: center;
-      padding: 7px 2% 0 2%; /* Top padding +2px from previous 5px for moving down */
+      padding: 5px 2% 0 2%; /* top padding */
       background: rgba(0,255,0,0.02);
       box-shadow: inset 0 0 10px rgba(57,255,20,0.1);
       position: relative;
@@ -57,14 +35,14 @@
       width: 30%;
       height: auto;
       display: block;
-      margin: 0 auto 3px auto; /* Logo → tagline remains same 3px */
+      margin: 0 auto 3px auto; /* 3px gap to tagline */
     }
 
-    /* Tagline with shiny white effect and letter spacing */
+    /* Tagline */
     header p {
       font-size: clamp(14px, 2vw, 18px);
-      margin: 0 0 3px 0; /* reduced from 5px to 3px for tagline → menu */
-      color: #fff; /* white */
+      margin: 0 0 5px 0; /* 5px gap to menu */
+      color: #fff;
       text-shadow:
         0 0 4px rgba(255,255,255,0.4),
         0 0 8px rgba(255,255,255,0.3),
@@ -74,20 +52,20 @@
       letter-spacing: 0.1em;
     }
 
-    /* Navigation menu */
+    /* Navigation */
     nav {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
+      justify-content: center;   /* center the whole menu horizontally */
+      gap: 1rem;
+      margin-bottom: 8px; /* gap between menu and main section */
       flex-wrap: wrap;
     }
 
     nav a {
       text-decoration: none;
-      color: #fff; /* white */
-      font-size: clamp(14px, 2vw, 16px);
-      padding: 0.4rem 0.8rem;
+      color: #fff; /* changed to white */
+      font-size: 16px;
+      padding: 6px 12px;
       border-radius: 4px;
       background: rgba(255,255,255,0.05);
       transition: all 0.3s ease;
@@ -100,64 +78,52 @@
       box-shadow: 0 0 12px rgba(255,255,255,0.8);
     }
 
-    /* Main content */
     main {
       max-width: 1000px;
-      margin: 0 auto 2rem auto;
-      padding: 1.5rem 2%;
+      margin: 0 auto 30px auto;
+      padding: 1rem 2%;
       text-align: center;
       background: rgba(0,0,0,0.6);
       border-radius: 8px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.2);
-      position: relative;
-      z-index: 1;
+      box-shadow: 0 0 20px rgba(57,255,20,0.2);
     }
 
+    /* Main box title with reduced font size */
     main h2 {
+      font-size: 20px; /* reduced from 24px */
       color: #fff;
       text-shadow: 0 0 6px rgba(255,255,255,0.5);
-      font-size: clamp(20px, 4vw, 28px);
+      margin-top: 0;
+      margin-bottom: 0.8rem;
     }
 
     main p {
-      font-size: clamp(14px, 2.5vw, 18px);
-      margin-top: 1rem;
-      color: var(--silver-light);
+      font-size: 18px;
+      color: #fff;
+      margin-top: 0.8rem;
+      text-shadow: 0 0 3px rgba(255,255,255,0.2);
     }
 
-    /* Footer */
     footer {
       text-align: center;
-      padding: 1rem 2%;
-      font-size: clamp(12px, 2vw, 14px);
+      padding: 12px;
+      font-size: 14px;
       color: var(--silver-light);
-      border-top: 1px solid rgba(255,255,255,0.3);
+      border-top: 1px solid rgba(57,255,20,0.3);
       background: rgba(0,0,0,0.5);
-      position: relative;
-      z-index: 1;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      nav {
-        gap: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav {
-        gap: 0.5rem;
+    @media (max-width: 600px) {
+      nav a {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating symbols -->
-  <div class="digital-symbols"></div>
-
   <header>
-    <!-- Logo at top center -->
+    <!-- Center logo -->
     <img src="logo.png" alt="Logo" class="logo">
     <!-- Tagline -->
     <p>A No.1 Online Digital Portal</p>
@@ -171,7 +137,7 @@
   </header>
 
   <main>
-    <h2>Welcome to Our Digital Hub</h2>
+    <h2>Welcome to Our Digital Blog Hub</h2>
     <p>Explore AI tools, online courses, and resources designed for modern learners. Our platform integrates education with technology to create an immersive learning experience.</p>
   </main>
 
