@@ -107,10 +107,10 @@
       z-index: 1;
     }
 
-    /* Internal wrapper to move content up */
+    /* Internal wrapper to move content up or down */
     .main-content {
       position: relative;
-      top: -8px; /* previous shift */
+      top: -7px; /* previously -8px, now moved down 1px to -7px */
     }
 
     main h2 {
@@ -118,7 +118,7 @@
       text-shadow: 0 0 6px rgba(255,255,255,0.5);
       font-size: clamp(16px, 4vw, 24px);
       margin-top: 0.3rem; /* gap from top inside main box */
-      margin-bottom: 0.2rem; /* adjusted gap to tagline */
+      margin-bottom: 0.2rem; /* gap to tagline */
     }
 
     main .tagline {
