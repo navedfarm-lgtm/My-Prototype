@@ -4,109 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - XYZ Pvt Ltd</title>
-  
-  <!-- Font Awesome for social media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+
   <style>
-    :root {
-      --black-base: #000;
-      --silver-light: #ccc;
-      --green-accent: #0f0;
-    }
+    :root { --black-bg:#000; --white-text:#fff; --green-accent:#0f0; }
 
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--silver-light);
-      background: var(--black-base);
+      background: var(--black-bg);
+      color: var(--white-text);
       line-height: 1.6;
       text-align: center;
     }
 
     header {
-      text-align: center;
-      padding: 10px 2%;
+      text-align:center;
+      padding:10px 2%;
     }
 
-    header img.logo {
-      max-width: 100px;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px auto;
-    }
+    header img.logo { max-width:120px; width:20%; margin-bottom:10px; }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-bottom: 15px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-bottom:20px;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      background: rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-      box-shadow: 0 0 5px rgba(255,255,255,0.2);
-    }
+    nav a { text-decoration:none; color:#fff; padding:5px 10px; border-radius:4px; background:rgba(255,255,255,0.05); transition:0.3s; }
+    nav a:hover { color:#000; background:#fff; box-shadow:0 0 12px rgba(255,255,255,0.8); }
 
-    nav a:hover {
-      color: #000;
-      background: #fff;
-      box-shadow: 0 0 12px rgba(255,255,255,0.8);
-    }
+    main { max-width:900px; margin:0 auto; padding:0 15px; }
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1rem 2%;
-    }
-
-    main h1, main h2 {
-      color: #fff;
-      margin: 15px 0;
-    }
-
-    main p {
-      color: var(--silver-light);
-      font-size: clamp(14px, 2vw, 18px);
-      margin-bottom: 10px;
-    }
-
-    .social-links a {
-      color: #fff;
-      margin: 0 8px;
-      font-size: 24px;
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: var(--green-accent);
-    }
-
-    .disclaimer {
-      background: #111;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 8px;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    .disclaimer img {
-      max-width: 120px;
-      margin: 10px 0;
-    }
-
-    @media(max-width:768px){
-      nav {
-        gap: 1rem;
-      }
+    footer {
+      text-align:center;
+      padding:1rem 2%;
+      font-size:14px;
+      background: rgba(0,0,0,0.5);
+      border-top: 1px solid rgba(255,255,255,0.3);
     }
   </style>
 </head>
@@ -114,9 +52,8 @@
 
 <header>
   <img src="logo.png" alt="XYZ Logo" class="logo">
-
   <nav>
-    <a href="home.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="products.html">Product & Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -127,46 +64,12 @@
   <h1>Contact Us</h1>
   <p>📧 Email: <a href="mailto:xyz@gmail.com" style="color:#0f0;">xyz@gmail.com</a></p>
   <p>📍 Address: Maharashtra, India</p>
-
-  <h2>Download & Share</h2>
-  <p>Install the XYZ App and enjoy free access to all our digital services.</p>
-  <div class="social-links">
-    <a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://youtube.com/@yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
 </main>
 
-<!-- Full Disclaimer Section -->
-<div class="disclaimer">
-  <img src="logo.png" alt="Company Logo">
-  <p>⚠️ Privacy Policy & Disclaimer</p>
-  <p>© 2025 XYZ Pvt Ltd. All Rights Reserved.<br>
-     Design & Web Development by M.D. Naved<br>
-     All content, logos, designs, and intellectual property are owned by XYZ Pvt Ltd unless otherwise noted. Unauthorized use or reproduction is strictly prohibited.</p>
-
-  <p>Effective Date: [Insert Date]</p>
-  <p>We are not affiliated with, sponsored by, or partnered with any government body, agency, private organization, or company, unless explicitly stated. All names, logos, trademarks, and intellectual property referenced on this website remain the property of their respective owners. Use of these references does not imply endorsement or partnership.</p>
-
-  <p>All services and resources on this website are free. No registration or personal information is required. We do not contact users via Telegram, third-party websites, calls, OTPs, or SMS. Any unsolicited communication claiming to be from us is fraudulent. No paid services, subscriptions, or hidden fees.</p>
-
-  <p>Information is provided for general informational, educational, and practical purposes only. Any reliance on the content or tools is strictly at your own risk.</p>
-
-  <p>External links to third-party websites are not controlled or endorsed. Users access such links at their own risk.</p>
-
-  <p>Use information and services responsibly. Protect your digital security and privacy.</p>
-
-  <p>Disclaimer and privacy policy may be updated periodically. Continued use constitutes acceptance.</p>
-
-  <p>The website owners are not liable for any damages, losses, or injuries arising from use or misuse of this website.</p>
-
-  <p>By accessing or using this website, you agree to all terms outlined in this disclaimer and privacy policy.</p>
-
-  <p>Be Safe. Be Secure. Thank you.</p>
-</div>
+<footer>
+  🛡️ © 2025 XYZ Pvt Ltd. All Rights Reserved.<br>
+  Design & Web Development by M.D. Naved
+</footer>
 
 </body>
 </html>
