@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - XYZ Pvt Ltd</title>
+
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --black-bg: #000;
+      --white-text: #fff;
+      --green-accent: #0f0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--black-bg);
+      color: var(--white-text);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    header img.logo {
+      max-width: 120px;
+      width: 20%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+      background: #fff;
+      box-shadow: 0 0 12px rgba(255,255,255,0.8);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    h1, h2 {
+      margin: 15px 0;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 700px;
+      margin: 10px auto 20px auto;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: var(--green-accent);
+    }
+
+    .disclaimer {
+      background: #111;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .disclaimer img {
+      max-width: 150px;
+      margin: 15px 0;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 15px 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer .center, footer .right, footer .left {
+      margin: 5px 0;
+    }
+
+    footer nav a {
+      display: block;
+      color: #fff;
+      margin: 3px 0;
+      text-decoration: none;
+    }
+
+    footer nav a:hover {
+      color: var(--green-accent);
+    }
+
+    @media(max-width:768px){
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+      footer nav {
+        margin-top: 10px;
+      }
+      nav {
+        gap: 10px;
+      }
+      nav a {
+        font-size: 14px;
+        padding: 4px 8px;
+      }
+    }
+
+    @media(max-width:480px){
+      header img.logo {
+        max-width: 80px;
+        width: 30%;
+      }
+      nav a {
+        font-size: 12px;
+        padding: 3px 6px;
+      }
+      ul {
+        padding-left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="XYZ Logo" class="logo">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Product & Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Website Overview & Vision</h1>
+  <h2>"Information is Key to Success"</h2>
+
+  <p>Our Aim Is To Provide Free, All-In-One Digital Services And Information With Clear, Step-By-Step Guidance For Everyone—Children, Adults, Women, Students, And Seniors—Any Age, Any Gender, All In One Place.</p>
+
+  <p>Our Website Is A One-Stop Digital Platform Offering Fast, Reliable, And Easy Access To Essential Online Services And Information For People Worldwide. By Providing Intuitive, Step-By-Step Guidance, We Make It Simple For Anyone To Find And Use The Resources They Need. We Bring Together:</p>
+
+  <ul>
+    <li>A Complete Road Map for Everyone</li>
+    <li>Online Earning Opportunities & Updates</li>
+    <li>Money-Making Ideas, Jobs & Careers</li>
+    <li>Tools, Utilities & Productivity Apps</li>
+    <li>Skills Learning & Entrepreneurship Guides</li>
+    <li>Education, Learning & Certifications</li>
+    <li>Government & Public Services</li>
+    <li>Schemes & Benefits</li>
+    <li>Current Affairs & Trending News</li>
+    <li>Security, Privacy & Digital Safety</li>
+    <li>Kids’ Learning & Parenting Resources</li>
+    <li>Motivational Quotes, Inspiration, Stories & Self-Development</li>
+  </ul>
+
+  <p>Our vision is to empower users by making digital information and services universally accessible, practical, and easy to navigate—all from a single platform.</p>
+
+  <h2>Download & Share</h2>
+  <p>Download the XYZ App and enjoy free access to all digital services.</p>
+  <div class="social-icons">
+    <a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <p>Contact: xyz@gmail.com<br>Address: Maharashtra, India</p>
+
+  <!-- Disclaimer & Privacy Policy -->
+  <div class="disclaimer">
+    <h2>⚠️ Disclaimer & Privacy Policy</h2>
+    <p>© 2025 Xyz Pvt Ltd. All Rights Reserved.<br>
+       Design & Web Development by M.D. Naved<br>
+       All content, logos, designs, and intellectual property are owned by XYZ Pvt Ltd unless otherwise noted. Unauthorized use or reproduction is strictly prohibited.</p>
+
+    <img src="logo.png" alt="Company Logo">
+
+    <p>Effective Date: [Insert Date]</p>
+    <p>We are not affiliated with, sponsored by, or partnered with any government body, agency, private organization, or company, unless explicitly stated. All names, logos, trademarks, and intellectual property referenced on this website remain the property of their respective owners. Use of these references does not imply endorsement or partnership.</p>
+
+    <p>All services and resources on this website are free. No registration or personal information is required. We do not contact users via Telegram, third-party websites, calls, OTPs, or SMS. Any unsolicited communication claiming to be from us is fraudulent. No paid services, subscriptions, or hidden fees.</p>
+
+    <p>Information is provided for general informational, educational, and practical purposes only. Any reliance on the content or tools is strictly at your own risk.</p>
+
+    <p>External links to third-party websites are not controlled or endorsed. Users access such links at their own risk.</p>
+
+    <p>Use information and services responsibly. Protect your digital security and privacy.</p>
+
+    <p>Disclaimer and privacy policy may be updated periodically. Continued use constitutes acceptance.</p>
+
+    <p>The website owners are not liable for any damages, losses, or injuries arising from use or misuse of this website.</p>
+
+    <p>By accessing or using this website, you agree to all terms outlined in this disclaimer and privacy policy.</p>
+
+    <p>Be Safe. Be Secure. Thank you.</p>
+  </div>
+</main>
+
+<!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
