@@ -81,7 +81,7 @@
     nav a {
       text-decoration: none;
       color: #fff;
-      font-size: clamp(14px, 2vw, 16px);
+      font-size: clamp(13px, 2vw, 15px); /* reduced by 1px */
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
       background: rgba(255,255,255,0.05);
@@ -110,14 +110,14 @@
     main h2 {
       color: #fff;
       text-shadow: 0 0 6px rgba(255,255,255,0.5);
-      font-size: clamp(16px, 4vw, 24px); /* reduced 4px */
-      margin-top: 0;
-      margin-bottom: 0.6rem; /* slightly reduced to match smaller font */
+      font-size: clamp(16px, 4vw, 24px); /* same as previous */
+      margin-top: 0.3rem; /* reduced gap from main box top by 3px */
+      margin-bottom: 0.4rem; /* reduced gap to paragraph by 2px */
     }
 
     main p {
       font-size: clamp(14px, 2.5vw, 18px);
-      margin: 0.6rem 0 0 0; /* adjusted top margin to match reduced h2 spacing */
+      margin: 0.4rem 0 0 0; /* matches reduced gap from h2 */
       color: var(--silver-light);
     }
 
