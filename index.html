@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -71,16 +71,6 @@
       letter-spacing: 0.3em; /* extra spacing for stretched look */
     }
 
-    /* second tagline styling same as Vision title */
-    header p.tagline2 {
-      color: #fff;
-      text-shadow: 0 0 6px rgba(255,255,255,0.5);
-      font-size: clamp(16px, 4vw, 24px); /* same size as Vision */
-      font-weight: 700;
-      margin: 0 0 4px 0;
-      letter-spacing: 0.15em;
-    }
-
     nav {
       display: flex;
       justify-content: center;
@@ -109,39 +99,38 @@
     main {
       max-width: 1000px;
       margin: 0 auto 2rem auto;
-      padding: 1rem 2% 3px 2%; /* bottom padding reduced to 3px */
+      padding: 0.8rem 2%; /* minimal top/bottom padding */
       text-align: center;
       background: rgba(0,0,0,0.6);
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(255,255,255,0.2);
       position: relative;
       z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .main-content {
-      position: relative;
-      top: -17px;
-    }
-
-    main h2 {
-      color: #fff;
-      text-shadow: 0 0 6px rgba(255,255,255,0.5);
-      font-size: clamp(16px, 4vw, 24px);
-      margin-top: 0.3rem;
-      margin-bottom: 0.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5px; /* smaller gap between taglines */
+      justify-content: center;
+      align-items: center;
     }
 
     main .tagline {
       color: #fff;
       font-size: clamp(14px, 2.2vw, 18px);
-      margin-bottom: 0.3rem;
       font-weight: 500;
     }
 
-    main p {
-      font-size: clamp(14px, 2.5vw, 18px);
-      margin: 0 0 0 0;
-      color: var(--silver-light);
+    main .tagline2 {
+      color: #fff;
+      text-shadow: 0 0 6px rgba(255,255,255,0.5);
+      font-size: clamp(16px, 4vw, 24px);
+      font-weight: 700;
+      letter-spacing: 0.15em;
     }
 
     footer {
@@ -176,8 +165,6 @@
     <img src="logo.png" alt="Logo" class="logo">
     <!-- first tagline -->
     <p class="tagline">Type Search &amp; Go !</p>
-    <!-- second tagline styled like Vision -->
-    <p class="tagline2">A No.1 All In One Digital Portal</p>
     <nav>
       <a href="#">Home</a>
       <a href="#">Product & Services</a>
@@ -188,9 +175,8 @@
 
   <main>
     <div class="main-content">
-      <h2>Vision</h2>
-      <div class="tagline">"Information is the Key to Success"</div>
-      <p>"Our mission is to provide free access to 'All Types of Digital Information & Services' in just one click, at one place, with complete and comprehensive guidance to everyone—around the world."</p>
+      <div class="tagline">"Information is Key to Success"</div>
+      <div class="tagline2">A No.1 All In One Digital Portal</div>
     </div>
   </main>
 
