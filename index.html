@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Learning Platform</title>
+  <title>xyz pvt ltd </title>
 
   <style>
     :root {
@@ -57,7 +57,8 @@
       margin: 0 auto 3px auto;
     }
 
-    header p {
+    /* first tagline styling */
+    header p.tagline {
       font-size: clamp(14px, 2vw, 18px);
       margin: 0 0 3px 0;
       color: #fff;
@@ -67,7 +68,17 @@
         0 0 12px rgba(255,255,255,0.2),
         0 0 16px rgba(255,255,255,0.1);
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.3em; /* extra spacing for stretched look */
+    }
+
+    /* second tagline styling same as Vision title */
+    header p.tagline2 {
+      color: #fff;
+      text-shadow: 0 0 6px rgba(255,255,255,0.5);
+      font-size: clamp(16px, 4vw, 24px); /* same size as Vision */
+      font-weight: 700;
+      margin: 0 0 4px 0;
+      letter-spacing: 0.15em;
     }
 
     nav {
@@ -107,7 +118,6 @@
       z-index: 1;
     }
 
-    /* Internal wrapper to move content up or down */
     .main-content {
       position: relative;
       top: -17px;
@@ -164,7 +174,10 @@
 
   <header>
     <img src="logo.png" alt="Logo" class="logo">
-    <p>A No.1 Online Digital Portal</p>
+    <!-- first tagline -->
+    <p class="tagline">Type Search &amp; Go !</p>
+    <!-- second tagline styled like Vision -->
+    <p class="tagline2">A No.1 All In One Digital Portal</p>
     <nav>
       <a href="#">Home</a>
       <a href="#">Product & Services</a>
@@ -176,13 +189,13 @@
   <main>
     <div class="main-content">
       <h2>Vision</h2>
-      <div class="tagline">Information is the Key to Success</div>
-      <p>Our mission is to provide free access to all types of digital information and services, in just one click, at one place, by providing in very easy and clear, step-by-step guidance to everyone—around the world.</p>
+      <div class="tagline">"Information is the Key to Success"</div>
+      <p>"Our mission is to provide free access to 'All Types of Digital Information & Services' in just one click, at one place, with complete and comprehensive guidance to everyone—around the world."</p>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 xyz pvt ptd. All rights reserved.
+    &copy; 2025 xyz pvt ltd. All rights reserved.
   </footer>
 
 </body>
