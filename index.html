@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -74,7 +74,7 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      margin-bottom: 8px; /* increased gap between menu and main section */
+      margin-bottom: 8px;
       flex-wrap: wrap;
     }
 
@@ -98,8 +98,7 @@
     main {
       max-width: 1000px;
       margin: 0 auto 2rem auto;
-      /* balanced top & bottom padding */
-      padding: 1rem 2%; 
+      padding: 1rem 2%;
       text-align: center;
       background: rgba(0,0,0,0.6);
       border-radius: 8px;
@@ -111,14 +110,14 @@
     main h2 {
       color: #fff;
       text-shadow: 0 0 6px rgba(255,255,255,0.5);
-      font-size: clamp(20px, 4vw, 28px);
-      margin-top: 0; /* no extra gap above title */
-      margin-bottom: 0.8rem; /* equal spacing below */
+      font-size: clamp(16px, 4vw, 24px); /* reduced 4px */
+      margin-top: 0;
+      margin-bottom: 0.6rem; /* slightly reduced to match smaller font */
     }
 
     main p {
       font-size: clamp(14px, 2.5vw, 18px);
-      margin: 0.8rem 0 0 0; /* same top margin as h2 bottom margin for balance */
+      margin: 0.6rem 0 0 0; /* adjusted top margin to match reduced h2 spacing */
       color: var(--silver-light);
     }
 
