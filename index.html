@@ -110,7 +110,7 @@
     /* Internal wrapper to move content up */
     .main-content {
       position: relative;
-      top: -8px; /* previous -5px + additional -3px = -8px total shift */
+      top: -8px; /* previous shift */
     }
 
     main h2 {
@@ -118,12 +118,19 @@
       text-shadow: 0 0 6px rgba(255,255,255,0.5);
       font-size: clamp(16px, 4vw, 24px);
       margin-top: 0.3rem; /* gap from top inside main box */
-      margin-bottom: 0.4rem; /* gap to paragraph */
+      margin-bottom: 0.2rem; /* adjusted gap to tagline */
+    }
+
+    main .tagline {
+      color: #fff;
+      font-size: clamp(14px, 2.2vw, 18px);
+      margin-bottom: 0.6rem; /* gap to paragraph */
+      font-weight: 500;
     }
 
     main p {
       font-size: clamp(14px, 2.5vw, 18px);
-      margin: 0.4rem 0 0 0;
+      margin: 0 0 0 0;
       color: var(--silver-light);
     }
 
@@ -168,8 +175,9 @@
 
   <main>
     <div class="main-content">
-      <h2>Welcome to Our Digital Hub</h2>
-      <p>Explore AI tools, online courses, and resources designed for modern learners. Our platform integrates education with technology to create an immersive learning experience.</p>
+      <h2>Vision</h2>
+      <div class="tagline">Information is the Key to Success</div>
+      <p>Our mission is to provide free access to all types of digital information and services, in just one click, at one place, by providing in very easy and clear, step-by-step guidance to everyone—around the world.</p>
     </div>
   </main>
 
