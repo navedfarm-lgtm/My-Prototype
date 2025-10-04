@@ -100,16 +100,25 @@
       transition: all 0.3s ease;
       text-transform: uppercase; 
       font-size: var(--base-font);
-      /* Strong outer shadow/border */
-      box-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.4) inset;
-      /* Lighter text glow */
-      text-shadow:
-        0 0 2px rgba(255,255,255,0.5),
-        0 0 4px rgba(255,255,255,0.4);
+      /* Eye-shaped shadow: horizontally elongated */
+      box-shadow:
+        -8px 0 15px rgba(255,255,255,0.5),
+         8px 0 15px rgba(255,255,255,0.5),
+        -4px 0 20px rgba(255,255,255,0.4) inset,
+         4px 0 20px rgba(255,255,255,0.4) inset,
+         0 0 10px rgba(255,255,255,0.3);
+      /* Slight text glow */
+      text-shadow: 0 0 2px rgba(255,255,255,0.5),
+                   0 0 4px rgba(255,255,255,0.4);
     }
 
     .mobile-nav button:hover {
-      box-shadow: 0 0 25px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.6) inset;
+      box-shadow:
+        -12px 0 25px rgba(255,255,255,0.8),
+         12px 0 25px rgba(255,255,255,0.8),
+        -6px 0 25px rgba(255,255,255,0.6) inset,
+         6px 0 25px rgba(255,255,255,0.6) inset,
+         0 0 15px rgba(255,255,255,0.5);
     }
 
     .mobile-nav .menu-links {
