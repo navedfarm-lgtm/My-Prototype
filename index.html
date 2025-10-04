@@ -86,7 +86,7 @@
       margin-bottom: 10px;
     }
 
-    /* Human eye shaped button */
+    /* Human eye shaped button with reduced size */
     .mobile-nav button {
       display: block;
       width: 140px;
@@ -94,17 +94,17 @@
       background: rgba(255,255,255,0.05);
       color: var(--white-text);
       border: none;
-      border-radius: 50% / 25%; /* oval, like human eye */
+      border-radius: 40% / 20%; /* smaller human eye shape */
       cursor: pointer;
       transition: all 0.3s ease;
       text-transform: uppercase;
       font-size: var(--base-font);
       /* layered eye shape glow */
       box-shadow:
-        0 0 0 2px rgba(255,255,255,0.4),   /* thin inner border */
-        0 0 8px rgba(255,255,255,0.5),     /* main glow */
-        0 0 20px rgba(255,255,255,0.3) inset; /* subtle inner glow */
-      text-shadow: 0 0 2px rgba(255,255,255,0.5); /* subtle text glow */
+        0 0 0 2px rgba(255,255,255,0.4),
+        0 0 8px rgba(255,255,255,0.5),
+        0 0 20px rgba(255,255,255,0.3) inset;
+      text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
 
     .mobile-nav button:hover {
