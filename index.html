@@ -20,8 +20,8 @@
     body {
       margin:0; padding:0;
       font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg);
-      color:var(--white-text);
+      background:var(--black-bg); /* original black background */
+      color:var(--white-text);     /* white text */
       line-height:1.6;
       text-align:center;
       font-size:var(--base-font);
@@ -114,25 +114,18 @@
       color:#000;
     }
 
-    /* Fix mobile Home & Menu button alignment */
-    .mobile-nav > div {
-      display: flex;
-      justify-content: center;
-      align-items: center; /* vertical center */
-      gap: 10px;
-    }
-
+    /* fix Home & Menu button alignment in mobile */
     .mobile-nav a button,
     .mobile-nav button {
-      display: block;      /* same box for both buttons */
-      margin: 0;
-      padding: 6px 14px;
-      line-height: 1.4;
+      display:inline-block;
+      vertical-align:middle;
+      line-height:1.4;
+      padding:6px 14px;
     }
 
     /* On mobile & tablets hide normal nav and show mobile-nav */
     @media (max-width: 768px) {
-      nav { display:none; }
+      nav { display:none; } /* hide normal nav */
       .mobile-nav { display:flex; flex-direction:column; align-items:center; }
     }
 
@@ -168,7 +161,7 @@
 
   <!-- Mobile/Tablet simplified nav -->
   <div class="mobile-nav">
-    <div>
+    <div style="display:flex; gap:10px; justify-content:center;">
       <a href="index.html"><button>Home</button></a>
       <button onclick="toggleMenu()">Menu</button>
     </div>
