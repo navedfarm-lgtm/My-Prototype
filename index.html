@@ -73,13 +73,7 @@
       border-radius:4px;
       font-size:var(--base-font);
       background:rgba(255,255,255,0.05);
-      transition:all 0.3s ease;
-    }
-
-    nav a:hover {
-      color:#000; 
-      background:#fff;
-      box-shadow:0 0 12px rgba(255,255,255,0.8);
+      transition: all 0.3s ease;
     }
 
     /* MOBILE/TABLET MENU STYLE */
@@ -97,7 +91,7 @@
 
     /* Buttons styling */
     .mobile-nav button {
-      display: block;
+      display: block;      
       margin: 0;
       padding: 6px 14px;
       line-height: 1.4;
@@ -106,21 +100,21 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .mobile-nav button:hover {
-      background:#fff;
-      color:#000;
-    }
-
-    /* Mobile menu links with smooth slide */
+    /* Mobile menu links with modern look and smooth slide */
     .mobile-nav .menu-links {
       max-height: 0;              /* hidden by default */
       overflow: hidden;
       flex-direction: column;
       margin-top: 10px;
       gap: 8px;
-      transition: max-height 0.3s ease;
+      background: rgba(30,30,30,0.95);  /* slightly lighter black */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* subtle shadow */
+      border-radius: 6px;
+      transition: max-height 0.3s ease, background 0.3s ease;
+      padding: 0 5px;
     }
 
     .mobile-nav .menu-links.active {
@@ -130,10 +124,25 @@
     .mobile-nav .menu-links a {
       display:block;
       color:var(--white-text);
-      background:rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.05);
       padding:5px 10px;
       border-radius:4px;
       text-decoration:none;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover and click effect for all menus and buttons */
+    nav a:hover,
+    .mobile-nav .menu-links a:hover,
+    .mobile-nav button:hover {
+      color: #000;
+      background: #fff;
+      box-shadow: 0 0 12px rgba(255,255,255,0.8);
+    }
+
+    .mobile-nav button:active,
+    .mobile-nav .menu-links a:active {
+      transform: scale(0.97);
     }
 
     /* On mobile & tablets hide normal nav and show mobile-nav */
