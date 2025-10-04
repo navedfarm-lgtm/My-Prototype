@@ -43,12 +43,12 @@
     }
 
     header .tagline {
-      font-size: clamp(16px, 2vw, 24px); /* responsive size */
-      font-weight: 600;                  /* slightly bold */
-      letter-spacing: 0.15em;            /* stretched effect */
-      color: var(--green-accent);        /* green accent for visibility */
+      font-size: clamp(12px, 2vw, 20px); /* responsive size */
+      font-weight: 600;                  
+      letter-spacing: 0.15em;            
+      color: rgba(255, 255, 255, 0.8);  /* light white */
       margin-bottom: 15px;
-      text-transform: uppercase;         /* optional digital look */
+      text-transform: uppercase;         
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -92,11 +92,10 @@
       margin:15px 0;
     }
 
-    /* Optional: Responsive adjustments */
     @media (max-width: 600px) {
       nav a { padding: 8px 6px; font-size: 0.9rem; }
       main { padding: 0 10px; }
-      header .tagline { font-size: clamp(14px, 3vw, 20px); }
+      header .tagline { font-size: clamp(10px, 3vw, 16px); } /* reduced on mobile too */
     }
   </style>
 </head>
@@ -114,9 +113,7 @@
 </header>
 
 <main>
-  <h1>Welcome to XYZ Pvt Ltd</h1>
-  <h2>“Innovating Your Digital Future”</h2>
-  <p>This is the home page content…</p>
+  <!-- Main content placeholder, ready for future portal info -->
 </main>
 
 </body>
