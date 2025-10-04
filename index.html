@@ -86,33 +86,28 @@
       margin-bottom: 10px;
     }
 
-    /* True human-eye-shaped buttons */
+    /* Perfect human-eye-shaped buttons with white border */
     .mobile-nav button {
       display: block;
       width: 140px;
-      height: 36px; 
-      background: rgba(255,255,255,0.05);
+      height: 40px; 
+      background: rgba(0,0,0,0.05);
       color: var(--white-text);
-      border: none;
+      border: 2px solid #fff; /* pure white border */
       cursor: pointer;
       transition: all 0.3s ease;
       text-transform: uppercase;
       font-size: var(--base-font);
-      /* Clip-path for human eye shape: tapered ends, horizontal oval */
+      /* Eye shape with tapered ends */
+      border-radius: 50% / 50%;
       clip-path: ellipse(70% 50% at 50% 50%);
-      border-radius: 50% / 50%; /* fallback if clip-path unsupported */
-      box-shadow:
-        0 0 0 2px rgba(255,255,255,0.4),
-        0 0 8px rgba(255,255,255,0.5),
-        0 0 20px rgba(255,255,255,0.3) inset;
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
 
     .mobile-nav button:hover {
-      box-shadow:
-        0 0 0 2px rgba(255,255,255,0.6),
-        0 0 15px rgba(255,255,255,0.8),
-        0 0 25px rgba(255,255,255,0.5) inset;
+      background: rgba(255,255,255,0.1);
+      color: #000;
+      box-shadow: 0 0 10px #fff;
     }
 
     .mobile-nav .menu-links {
@@ -153,8 +148,6 @@
     nav a:hover,
     .mobile-nav .menu-links a:hover,
     .mobile-nav button:hover {
-      color: #000;
-      background: #fff;
       animation: glowPulse 1s ease-in-out infinite alternate;
     }
 
