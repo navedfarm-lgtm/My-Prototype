@@ -81,19 +81,19 @@
       display:none; /* hidden by default on desktop */
     }
 
-    /* Top buttons container */
+    /* Mobile top buttons stacked vertically */
     .mobile-nav > div {
       display: flex;
-      justify-content: center;
-      align-items: center; /* vertical center */
-      gap: 10px;
+      flex-direction: column; /* stack vertically */
+      align-items: center;    /* center horizontally */
+      gap: 10px;              /* space between buttons */
+      margin-bottom: 10px;
     }
 
-    /* Buttons styling */
     .mobile-nav button {
-      display: block;      
-      margin: 0;
-      padding: 6px 14px;
+      display: block;
+      width: 120px; /* optional: same width */
+      padding: 8px 14px;
       line-height: 1.4;
       background: rgba(255,255,255,0.05);
       color: var(--white-text);
@@ -192,9 +192,9 @@
   <!-- Mobile/Tablet simplified nav -->
   <div class="mobile-nav">
     <div>
-      <!-- Home button -->
+      <!-- Home button on top -->
       <button onclick="location.href='index.html'">Home</button>
-      <!-- Menu button -->
+      <!-- Menu button below -->
       <button onclick="toggleMenu()">Menu</button>
     </div>
     <div class="menu-links" id="mobileMenuLinks">
