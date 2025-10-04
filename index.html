@@ -14,7 +14,9 @@
       --heading-font: clamp(22px, 3vw, 36px);
       --subheading-font: clamp(18px, 2.5vw, 28px);
     }
-    *{box-sizing:border-box;}
+
+    * { box-sizing: border-box; }
+
     body {
       margin:0; padding:0;
       font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
@@ -24,36 +26,85 @@
       text-align:center;
       font-size:var(--base-font);
     }
-    header {text-align:center; padding:10px 2%;}
+
+    header {
+      text-align:center;
+      padding:10px 2%;
+    }
+
     header img.logo {
       max-width:clamp(80px,15vw,140px);
-      width:20%; height:auto; margin-bottom:10px;
+      width:20%;
+      height:auto;
+      margin-bottom:10px;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
     }
+
+    header .tagline {
+      font-size: clamp(16px, 2vw, 24px); /* responsive size */
+      font-weight: 600;                  /* slightly bold */
+      letter-spacing: 0.15em;            /* stretched effect */
+      color: var(--green-accent);        /* green accent for visibility */
+      margin-bottom: 15px;
+      text-transform: uppercase;         /* optional digital look */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     nav {
-      display:flex; justify-content:center;
+      display:flex; 
+      justify-content:center;
       gap:clamp(10px,2vw,20px);
-      flex-wrap:wrap; margin-bottom:20px;
+      flex-wrap:wrap; 
+      margin-bottom:20px;
     }
+
     nav a {
-      text-decoration:none; color:var(--white-text);
-      padding:5px 10px; border-radius:4px;
+      text-decoration:none; 
+      color:var(--white-text);
+      padding:5px 10px; 
+      border-radius:4px;
       font-size:var(--base-font);
       background:rgba(255,255,255,0.05);
       transition:all 0.3s ease;
     }
+
     nav a:hover {
-      color:#000; background:#fff;
+      color:#000; 
+      background:#fff;
       box-shadow:0 0 12px rgba(255,255,255,0.8);
     }
-    main {max-width:900px; margin:0 auto; padding:0 15px;}
-    h1 {font-size:var(--heading-font); margin:15px 0;}
-    h2 {font-size:var(--subheading-font); margin:15px 0;}
+
+    main {
+      max-width:900px; 
+      margin:0 auto; 
+      padding:0 15px;
+    }
+
+    h1 {
+      font-size:var(--heading-font); 
+      margin:15px 0;
+    }
+
+    h2 {
+      font-size:var(--subheading-font); 
+      margin:15px 0;
+    }
+
+    /* Optional: Responsive adjustments */
+    @media (max-width: 600px) {
+      nav a { padding: 8px 6px; font-size: 0.9rem; }
+      main { padding: 0 10px; }
+      header .tagline { font-size: clamp(14px, 3vw, 20px); }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <img src="logo.png" alt="XYZ Logo" class="logo">
+  <div class="tagline">A No.1 All In One Digital Portal</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Product & Services</a>
