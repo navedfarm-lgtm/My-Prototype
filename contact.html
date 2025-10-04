@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -183,31 +183,31 @@
 
     main {
       max-width:900px; 
-      margin:0 auto; 
+      margin:20px auto; 
       padding:0 15px;
     }
 
     h1 { font-size:var(--heading-font); margin:15px 0; }
     h2 { font-size:var(--subheading-font); margin:15px 0; }
+    p  { font-size:var(--base-font); margin:10px 0; }
   </style>
 </head>
 <body>
 
 <header>
   <img src="logo.png" alt="XYZ Logo" class="logo">
-  <div class="tagline">A No.1 All In One Digital Portal</div>
+  <div class="tagline">Contact</div>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="products.html">Product & Services</a>
+    <a href="productnservices.html">Product & Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="#">Download</a>
-    <a href="#">New Updates</a>
-    <a href="#">Blog</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Term of Use</a>
-    <a href="#">Disclaimer</a>
+    <a href="download.html">Download</a>
+    <a href="webblogupdates.html">Web Blog & Updates</a>
+    <a href="privacypolicy">Privacy & Policy</a>
+    <a href="termncondition">Term & Condition</a>
+    <a href="disclaimer">Disclaimer</a>
   </nav>
 
   <div class="mobile-nav">
@@ -216,20 +216,27 @@
       <button id="menuButton">Menu</button>
     </div>
     <div class="menu-links" id="mobileMenuLinks">
-      <a href="products.html">Product & Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="#">Download</a>
-      <a href="#">New Updates</a>
-      <a href="#">Blog</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Term of Use</a>
-      <a href="#">Disclaimer</a>
+      <a href="index.html">Home</a>
+    <a href="productnservices.html">Product & Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="download.html">Download</a>
+    <a href="webblogupdates.html">Web Blog & Updates</a>
+    <a href="privacypolicy">Privacy & Policy</a>
+    <a href="termncondition">Term & Condition</a>
+    <a href="disclaimer">Disclaimer</a>
     </div>
   </div>
 </header>
 
-<main></main>
+<main>
+  <h1>Welcome to XYZ Pvt Ltd</h1>
+  <p>
+    We provide fast, reliable, and easy access to essential online services and information 
+    for people worldwide. By offering intuitive, step-by-step guidance, we make it simple 
+    for anyone to find and use.
+  </p>
+</main>
 
 <script>
 const menuButton = document.getElementById('menuButton');
@@ -239,23 +246,19 @@ menuButton.addEventListener('click', function(e){
   e.stopPropagation();
   
   if(menuLinks.classList.contains('active')){
-    // Menu is open → close menu & remove glow immediately
     menuLinks.classList.remove('active');
     menuButton.classList.remove('hover-active');
   } else {
-    // Menu is closed → open menu & keep glow
     menuLinks.classList.add('active');
     menuButton.classList.add('hover-active');
   }
 });
 
-// Click anywhere outside → close menu & remove glow
 document.addEventListener('click', function(){
   menuLinks.classList.remove('active');
   menuButton.classList.remove('hover-active');
 });
 
-// Prevent closing if clicking inside menu
 menuLinks.addEventListener('click', function(e){
   e.stopPropagation();
 });
