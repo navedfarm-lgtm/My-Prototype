@@ -74,6 +74,12 @@
       transition: all 0.3s ease;
     }
 
+    nav a:hover {
+      color:#000;
+      background:#fff;
+      animation: glowPulse 1s ease-in-out infinite alternate;
+    }
+
     .mobile-nav {
       display:none; 
     }
@@ -106,8 +112,7 @@
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
 
-    /* Hover effect for button and when active by click */
-    .mobile-nav button:hover,
+    /* Hover effect or active glow when menu open */
     .mobile-nav button.hover-active {
       background: rgba(255,255,255,0.1);
       color: #000;
@@ -146,17 +151,16 @@
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
 
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-      50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
-      100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-    }
-
-    nav a:hover,
     .mobile-nav .menu-links a:hover {
       color: #000;
       background: #fff;
       animation: glowPulse 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
+      50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
+      100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
     }
 
     .mobile-nav button:active,
@@ -228,28 +232,33 @@
 <main></main>
 
 <script>
-  const menuButton = document.getElementById('menuButton');
-  const menuLinks = document.getElementById('mobileMenuLinks');
+const menuButton = document.getElementById('menuButton');
+const menuLinks = document.getElementById('mobileMenuLinks');
 
-  // Toggle menu & hover on button click
-  menuButton.addEventListener('click', function(e){
-    e.stopPropagation(); // prevent outside click closing
-    menuLinks.classList.toggle('active');
-    menuButton.classList.toggle('hover-active');
-  });
+menuButton.addEventListener('click', function(e){
+  e.stopPropagation();
+  
+  if(menuLinks.classList.contains('active')){
+    // Menu is open → close menu & remove glow immediately
+    menuLinks.classList.remove('active');
+    menuButton.classList.remove('hover-active');
+  } else {
+    // Menu is closed → open menu & keep glow
+    menuLinks.classList.add('active');
+    menuButton.classList.add('hover-active');
+  }
+});
 
-  // Close menu & hover on outside click/touch
-  document.addEventListener('click', function(){
-    if(menuLinks.classList.contains('active')){
-      menuLinks.classList.remove('active');
-      menuButton.classList.remove('hover-active');
-    }
-  });
+// Click anywhere outside → close menu & remove glow
+document.addEventListener('click', function(){
+  menuLinks.classList.remove('active');
+  menuButton.classList.remove('hover-active');
+});
 
-  // Prevent closing menu if clicking inside menu links
-  menuLinks.addEventListener('click', function(e){
-    e.stopPropagation();
-  });
+// Prevent closing if clicking inside menu
+menuLinks.addEventListener('click', function(e){
+  e.stopPropagation();
+});
 </script>
 
 </body>
