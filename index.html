@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -86,20 +86,21 @@
       margin-bottom: 10px;
     }
 
-    /* Human eye shaped button with reduced size */
+    /* True human-eye-shaped buttons */
     .mobile-nav button {
       display: block;
       width: 140px;
-      padding: 10px 14px;
+      height: 36px; 
       background: rgba(255,255,255,0.05);
       color: var(--white-text);
       border: none;
-      border-radius: 40% / 20%; /* smaller human eye shape */
       cursor: pointer;
       transition: all 0.3s ease;
       text-transform: uppercase;
       font-size: var(--base-font);
-      /* layered eye shape glow */
+      /* Clip-path for human eye shape: tapered ends, horizontal oval */
+      clip-path: ellipse(70% 50% at 50% 50%);
+      border-radius: 50% / 50%; /* fallback if clip-path unsupported */
       box-shadow:
         0 0 0 2px rgba(255,255,255,0.4),
         0 0 8px rgba(255,255,255,0.5),
