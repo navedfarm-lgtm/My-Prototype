@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --black-bg: #000;
-      --white-text: #fff;
-      --green-accent: #0f0;
+      --black-bg:#000;
+      --white-text:#fff;
+      --green-accent:#0f0;
       --base-font: clamp(14px, 2vw, 18px);
       --heading-font: clamp(22px, 3vw, 36px);
       --subheading-font: clamp(18px, 2.5vw, 28px);
@@ -18,85 +18,84 @@
     * { box-sizing: border-box; }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--black-bg);
-      color: var(--white-text);
-      line-height: 1.6;
-      text-align: center;
-      font-size: var(--base-font);
+      margin:0; padding:0;
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:var(--black-bg);
+      color:var(--white-text);
+      line-height:1.6;
+      text-align:center;
+      font-size:var(--base-font);
     }
 
     header {
-      text-align: center;
-      padding: 10px 2%;
+      text-align:center;
+      padding:10px 2%;
     }
 
     header img.logo {
-      max-width: clamp(150px, 15vw, 250px);
-      width: 40%;
-      height: auto;
-      margin-bottom: 10px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      max-width:clamp(150px,15vw,250px);
+      width:40%;
+      height:auto;
+      margin-bottom:10px;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
     }
 
     header .tagline {
       font-size: clamp(12px, 2vw, 20px);
-      font-weight: 600;
-      letter-spacing: 0.15em;
+      font-weight: 600;                  
+      letter-spacing: 0.15em;            
       color: rgba(255, 255, 255, 0.95);
       margin-bottom: 15px;
-      text-transform: uppercase;
+      text-transform: uppercase;         
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.8),
-        0 0 10px rgba(255, 255, 255, 0.7),
-        0 0 15px rgba(255, 255, 255, 0.6),
-        0 0 20px rgba(255, 255, 255, 0.5);
+      text-shadow: 
+        0 0 5px rgba(255,255,255,0.8),
+        0 0 10px rgba(255,255,255,0.7),
+        0 0 15px rgba(255,255,255,0.6),
+        0 0 20px rgba(255,255,255,0.5);
     }
 
     /* Default nav for desktop/laptop (all links visible) */
     nav {
-      display: flex;
-      justify-content: center;
-      gap: clamp(10px, 2vw, 20px);
-      flex-wrap: wrap;
-      margin-bottom: 20px;
+      display:flex; 
+      justify-content:center;
+      gap:clamp(10px,2vw,20px);
+      flex-wrap:wrap; 
+      margin-bottom:20px;
     }
 
     nav a {
-      text-decoration: none;
-      color: var(--white-text);
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-size: var(--base-font);
-      background: rgba(255, 255, 255, 0.05);
+      text-decoration:none; 
+      color:var(--white-text);
+      padding:5px 10px; 
+      border-radius:4px;
+      font-size:var(--base-font);
+      background:rgba(255,255,255,0.05);
       transition: all 0.3s ease;
     }
 
     /* MOBILE/TABLET MENU STYLE */
     .mobile-nav {
-      display: none; /* hidden by default on desktop */
+      display:none; /* hidden by default on desktop */
     }
 
-    /* Corrected Flexbox for Top buttons container */
+    /* Top buttons container */
     .mobile-nav > div {
       display: flex;
-      justify-content: center; /* Center the buttons horizontally */
-      align-items: center; /* Vertically center the buttons */
+      justify-content: center;
+      align-items: center; /* vertical center */
       gap: 10px;
     }
 
     /* Buttons styling */
     .mobile-nav button {
-      display: block;
+      display: block;      
       margin: 0;
       padding: 6px 14px;
       line-height: 1.4;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255,255,255,0.05);
       color: var(--white-text);
       border: none;
       border-radius: 4px;
@@ -106,14 +105,13 @@
 
     /* Mobile menu links with modern look and smooth slide */
     .mobile-nav .menu-links {
-      max-height: 0; /* hidden by default */
+      max-height: 0;              /* hidden by default */
       overflow: hidden;
-      display: flex;
       flex-direction: column;
       margin-top: 10px;
       gap: 8px;
-      background: rgba(30, 30, 30, 0.95);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      background: rgba(30,30,30,0.95);  /* slightly lighter black */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* subtle shadow */
       border-radius: 6px;
       transition: max-height 0.3s ease, background 0.3s ease;
       padding: 0 5px;
@@ -121,28 +119,35 @@
 
     .mobile-nav .menu-links.active {
       max-height: 500px; /* enough to show all links */
-      padding: 10px 5px; /* Add padding when active */
     }
 
     .mobile-nav .menu-links a {
-      display: block;
-      color: var(--white-text);
-      background: rgba(255, 255, 255, 0.05);
-      padding: 5px 10px;
-      border-radius: 4px;
-      text-decoration: none;
+      display:block;
+      color:var(--white-text);
+      background: rgba(255,255,255,0.05);
+      padding:5px 10px;
+      border-radius:4px;
+      text-decoration:none;
       transition: all 0.3s ease;
     }
 
-    /* Hover and click effect for all menus and buttons */
+    /* Hover glow animation */
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
+      50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
+      100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
+    }
+
+    /* Hover effect for all menu links and buttons */
     nav a:hover,
     .mobile-nav .menu-links a:hover,
     .mobile-nav button:hover {
       color: #000;
       background: #fff;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+      animation: glowPulse 1s ease-in-out infinite alternate;
     }
 
+    /* Click/press effect */
     .mobile-nav button:active,
     .mobile-nav .menu-links a:active {
       transform: scale(0.97);
@@ -150,18 +155,18 @@
 
     /* On mobile & tablets hide normal nav and show mobile-nav */
     @media (max-width: 768px) {
-      nav { display: none; }
-      .mobile-nav { display: flex; flex-direction: column; align-items: center; }
+      nav { display:none; }
+      .mobile-nav { display:flex; flex-direction:column; align-items:center; }
     }
 
     main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 15px;
+      max-width:900px; 
+      margin:0 auto; 
+      padding:0 15px;
     }
 
-    h1 { font-size: var(--heading-font); margin: 15px 0; }
-    h2 { font-size: var(--subheading-font); margin: 15px 0; }
+    h1 { font-size:var(--heading-font); margin:15px 0; }
+    h2 { font-size:var(--subheading-font); margin:15px 0; }
   </style>
 </head>
 <body>
