@@ -57,7 +57,7 @@
         0 0 20px rgba(255,255,255,0.5);
     }
 
-    /* Default nav for desktop/laptop (all links visible) */
+    /* Default nav for desktop/laptop */
     nav {
       display:flex; 
       justify-content:center;
@@ -86,13 +86,13 @@
       display: flex;
       flex-direction: column; /* stack vertically */
       align-items: center;    /* center horizontally */
-      gap: 10px;              /* space between buttons */
+      gap: 10px;              
       margin-bottom: 10px;
     }
 
     .mobile-nav button {
       display: block;
-      width: 120px; /* same width */
+      width: 120px; 
       padding: 8px 14px;
       line-height: 1.4;
       background: rgba(255,255,255,0.05);
@@ -101,32 +101,38 @@
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.3s ease;
-      text-transform: uppercase; /* uppercase text */
+      text-transform: uppercase; 
       font-size: var(--base-font);
-      /* Shadow/glow effect */
-      box-shadow: 0 0 8px rgba(255,255,255,0.5);
+      /* Darker border shadow around button */
+      box-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.4) inset;
+      /* Glow effect on text like tagline */
+      text-shadow:
+        0 0 5px rgba(255,255,255,0.8),
+        0 0 10px rgba(255,255,255,0.7),
+        0 0 15px rgba(255,255,255,0.6),
+        0 0 20px rgba(255,255,255,0.5);
     }
 
     .mobile-nav button:hover {
-      box-shadow: 0 0 20px rgba(255,255,255,1);
+      box-shadow: 0 0 25px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.6) inset;
     }
 
-    /* Mobile menu links with modern look and smooth slide */
+    /* Mobile menu links */
     .mobile-nav .menu-links {
-      max-height: 0;              /* hidden by default */
+      max-height: 0;              
       overflow: hidden;
       flex-direction: column;
       margin-top: 10px;
       gap: 8px;
-      background: rgba(30,30,30,0.95);  /* slightly lighter black */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* subtle shadow */
+      background: rgba(30,30,30,0.95);  
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4); 
       border-radius: 6px;
       transition: max-height 0.3s ease, background 0.3s ease;
       padding: 0 5px;
     }
 
     .mobile-nav .menu-links.active {
-      max-height: 500px; /* enough to show all links */
+      max-height: 500px; 
     }
 
     .mobile-nav .menu-links a {
@@ -138,9 +144,9 @@
       text-decoration:none;
       transition: all 0.3s ease;
       font-size: var(--base-font);
+      text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
 
-    /* Hover glow animation */
     @keyframes glowPulse {
       0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
       50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
@@ -156,23 +162,19 @@
       animation: glowPulse 1s ease-in-out infinite alternate;
     }
 
-    /* Click/press effect */
     .mobile-nav button:active,
     .mobile-nav .menu-links a:active {
       transform: scale(0.97);
     }
 
-    /* On mobile & tablets hide normal nav and show mobile-nav */
     @media (max-width: 768px) {
       nav { display:none; }
       .mobile-nav { display:flex; flex-direction:column; align-items:center; }
 
-      /* Home/Menu buttons remain base -1px */
       .mobile-nav button {
         font-size: calc(var(--base-font) - 1px);
       }
 
-      /* Mobile menu sub-options: base +1px */
       .mobile-nav .menu-links a {
         font-size: calc(var(--base-font) + 1px);
       }
@@ -194,7 +196,6 @@
   <img src="logo.png" alt="XYZ Logo" class="logo">
   <div class="tagline">A No.1 All In One Digital Portal</div>
 
-  <!-- Normal nav for PC/Laptop -->
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Product & Services</a>
@@ -208,12 +209,9 @@
     <a href="#">Disclaimer</a>
   </nav>
 
-  <!-- Mobile/Tablet simplified nav -->
   <div class="mobile-nav">
     <div>
-      <!-- Home button on top -->
       <button onclick="location.href='index.html'">Home</button>
-      <!-- Menu button below -->
       <button onclick="toggleMenu()">Menu</button>
     </div>
     <div class="menu-links" id="mobileMenuLinks">
@@ -231,13 +229,12 @@
 </header>
 
 <main>
-  <!-- Main content placeholder -->
 </main>
 
 <script>
   function toggleMenu(){
     const menu = document.getElementById('mobileMenuLinks');
-    menu.classList.toggle('active'); // toggles smooth slide
+    menu.classList.toggle('active');
   }
 </script>
 
