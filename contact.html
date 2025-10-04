@@ -5,47 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - XYZ Pvt Ltd</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
-    :root { --black-bg:#000; --white-text:#fff; --green-accent:#0f0; }
-
+    :root {
+      --black-bg:#000;
+      --white-text:#fff;
+      --green-accent:#0f0;
+      --base-font: clamp(14px, 2vw, 18px);
+      --heading-font: clamp(22px, 3vw, 36px);
+      --subheading-font: clamp(18px, 2.5vw, 28px);
+    }
+    *{box-sizing:border-box;}
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--black-bg);
-      color: var(--white-text);
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    header {
+      margin:0; padding:0;
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:var(--black-bg);
+      color:var(--white-text);
+      line-height:1.6;
       text-align:center;
-      padding:10px 2%;
+      font-size:var(--base-font);
     }
-
-    header img.logo { max-width:120px; width:20%; margin-bottom:10px; }
-
+    header {text-align:center; padding:10px 2%;}
+    header img.logo {
+      max-width:clamp(80px,15vw,140px);
+      width:20%; height:auto; margin-bottom:10px;
+    }
     nav {
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-      margin-bottom:20px;
+      display:flex; justify-content:center;
+      gap:clamp(10px,2vw,20px);
+      flex-wrap:wrap; margin-bottom:20px;
     }
-
-    nav a { text-decoration:none; color:#fff; padding:5px 10px; border-radius:4px; background:rgba(255,255,255,0.05); transition:0.3s; }
-    nav a:hover { color:#000; background:#fff; box-shadow:0 0 12px rgba(255,255,255,0.8); }
-
-    main { max-width:900px; margin:0 auto; padding:0 15px; }
-
-    footer {
-      text-align:center;
-      padding:1rem 2%;
-      font-size:14px;
-      background: rgba(0,0,0,0.5);
-      border-top: 1px solid rgba(255,255,255,0.3);
+    nav a {
+      text-decoration:none; color:var(--white-text);
+      padding:5px 10px; border-radius:4px;
+      font-size:var(--base-font);
+      background:rgba(255,255,255,0.05);
+      transition:all 0.3s ease;
     }
+    nav a:hover {
+      color:#000; background:#fff;
+      box-shadow:0 0 12px rgba(255,255,255,0.8);
+    }
+    main {max-width:900px; margin:0 auto; padding:0 15px;}
+    h1 {font-size:var(--heading-font); margin:15px 0;}
+    h2 {font-size:var(--subheading-font); margin:15px 0;}
   </style>
 </head>
 <body>
@@ -65,11 +67,6 @@
   <p>📧 Email: <a href="mailto:xyz@gmail.com" style="color:#0f0;">xyz@gmail.com</a></p>
   <p>📍 Address: Maharashtra, India</p>
 </main>
-
-<footer>
-  🛡️ © 2025 XYZ Pvt Ltd. All Rights Reserved.<br>
-  Design & Web Development by M.D. Naved
-</footer>
 
 </body>
 </html>
