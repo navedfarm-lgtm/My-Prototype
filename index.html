@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -43,15 +43,13 @@
     }
 
     header .tagline {
-      font-size: clamp(12px, 2vw, 20px); /* responsive size */
+      font-size: clamp(12px, 2vw, 20px);
       font-weight: 600;                  
       letter-spacing: 0.15em;            
-      color: rgba(255, 255, 255, 0.95);  /* bright light white */
+      color: rgba(255, 255, 255, 0.95);
       margin-bottom: 15px;
       text-transform: uppercase;         
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-      /* Shiny spread light effect */
       text-shadow: 
         0 0 5px rgba(255,255,255,0.8),
         0 0 10px rgba(255,255,255,0.7),
@@ -59,6 +57,7 @@
         0 0 20px rgba(255,255,255,0.5);
     }
 
+    /* Default nav for desktop/laptop (all links visible) */
     nav {
       display:flex; 
       justify-content:center;
@@ -83,27 +82,47 @@
       box-shadow:0 0 12px rgba(255,255,255,0.8);
     }
 
+    /* MOBILE/TABLET MENU STYLE */
+    .mobile-nav {
+      display:none; /* hidden by default on desktop */
+    }
+    .mobile-nav .menu-links {
+      display:none;
+      flex-direction:column;
+      margin-top:10px;
+      gap:8px;
+    }
+    .mobile-nav .menu-links a {
+      display:block;
+    }
+    .mobile-nav button {
+      background:rgba(255,255,255,0.05);
+      color:var(--white-text);
+      border:none;
+      padding:6px 14px;
+      border-radius:4px;
+      font-size:var(--base-font);
+      cursor:pointer;
+    }
+    .mobile-nav button:hover {
+      background:#fff;
+      color:#000;
+    }
+
+    /* On mobile & tablets hide normal nav and show mobile-nav */
+    @media (max-width: 768px) {
+      nav { display:none; } /* hide normal nav */
+      .mobile-nav { display:flex; flex-direction:column; align-items:center; }
+    }
+
     main {
       max-width:900px; 
       margin:0 auto; 
       padding:0 15px;
     }
 
-    h1 {
-      font-size:var(--heading-font); 
-      margin:15px 0;
-    }
-
-    h2 {
-      font-size:var(--subheading-font); 
-      margin:15px 0;
-    }
-
-    @media (max-width: 600px) {
-      nav a { padding: 8px 6px; font-size: 0.9rem; }
-      main { padding: 0 10px; }
-      header .tagline { font-size: clamp(10px, 3vw, 16px); } /* smaller on mobile */
-    }
+    h1 { font-size:var(--heading-font); margin:15px 0; }
+    h2 { font-size:var(--subheading-font); margin:15px 0; }
   </style>
 </head>
 <body>
@@ -111,17 +130,51 @@
 <header>
   <img src="logo.png" alt="XYZ Logo" class="logo">
   <div class="tagline">A No.1 All In One Digital Portal</div>
+
+  <!-- Normal nav for PC/Laptop -->
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Product & Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+    <a href="#">Download</a>
+    <a href="#">New Updates</a>
+    <a href="#">Blog</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Term of Use</a>
+    <a href="#">Disclaimer</a>
   </nav>
+
+  <!-- Mobile/Tablet simplified nav -->
+  <div class="mobile-nav">
+    <div style="display:flex; gap:10px; justify-content:center;">
+      <a href="index.html"><button>Home</button></a>
+      <button onclick="toggleMenu()">Menu</button>
+    </div>
+    <div class="menu-links" id="mobileMenuLinks">
+      <a href="products.html">Product & Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Download</a>
+      <a href="#">New Updates</a>
+      <a href="#">Blog</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Term of Use</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
 </header>
 
 <main>
-  <!-- Main content placeholder, ready for future portal info -->
+  <!-- Main content placeholder -->
 </main>
+
+<script>
+  function toggleMenu(){
+    const menu = document.getElementById('mobileMenuLinks');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+  }
+</script>
 
 </body>
 </html>
