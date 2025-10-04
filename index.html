@@ -57,7 +57,6 @@
         0 0 20px rgba(255,255,255,0.5);
     }
 
-    /* Default nav for desktop/laptop */
     nav {
       display:flex; 
       justify-content:center;
@@ -76,16 +75,14 @@
       transition: all 0.3s ease;
     }
 
-    /* MOBILE/TABLET MENU STYLE */
     .mobile-nav {
-      display:none; /* hidden by default on desktop */
+      display:none; 
     }
 
-    /* Mobile top buttons stacked vertically */
     .mobile-nav > div {
       display: flex;
-      flex-direction: column; /* stack vertically */
-      align-items: center;    /* center horizontally */
+      flex-direction: column; 
+      align-items: center;    
       gap: 10px;              
       margin-bottom: 10px;
     }
@@ -103,21 +100,18 @@
       transition: all 0.3s ease;
       text-transform: uppercase; 
       font-size: var(--base-font);
-      /* Darker border shadow around button */
+      /* Strong outer shadow/border */
       box-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.4) inset;
-      /* Glow effect on text like tagline */
+      /* Lighter text glow */
       text-shadow:
-        0 0 5px rgba(255,255,255,0.8),
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 15px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.5);
+        0 0 2px rgba(255,255,255,0.5),
+        0 0 4px rgba(255,255,255,0.4);
     }
 
     .mobile-nav button:hover {
       box-shadow: 0 0 25px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.6) inset;
     }
 
-    /* Mobile menu links */
     .mobile-nav .menu-links {
       max-height: 0;              
       overflow: hidden;
@@ -153,7 +147,6 @@
       100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
     }
 
-    /* Hover effect for all menu links and buttons */
     nav a:hover,
     .mobile-nav .menu-links a:hover,
     .mobile-nav button:hover {
@@ -228,8 +221,7 @@
   </div>
 </header>
 
-<main>
-</main>
+<main></main>
 
 <script>
   function toggleMenu(){
