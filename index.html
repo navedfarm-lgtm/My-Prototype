@@ -161,10 +161,14 @@
       nav { display:none; }
       .mobile-nav { display:flex; flex-direction:column; align-items:center; }
 
-      /* Increase font size by 1px from last reduced version (base -1px) */
-      .mobile-nav button,
-      .mobile-nav .menu-links a {
+      /* Home/Menu buttons: base -1px */
+      .mobile-nav button {
         font-size: calc(var(--base-font) - 1px);
+      }
+
+      /* Mobile menu sub-options: base (increase by 1px from previous) */
+      .mobile-nav .menu-links a {
+        font-size: var(--base-font);
       }
     }
 
