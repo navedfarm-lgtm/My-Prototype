@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,8 +20,8 @@
     body {
       margin:0; padding:0;
       font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg);
-      color:var(--white-text);
+      background:var(--black-bg); /* original black background */
+      color:var(--white-text);     /* white text */
       line-height:1.6;
       text-align:center;
       font-size:var(--base-font);
@@ -94,6 +94,11 @@
     }
     .mobile-nav .menu-links a {
       display:block;
+      color:var(--white-text);
+      background:rgba(255,255,255,0.05);
+      padding:5px 10px;
+      border-radius:4px;
+      text-decoration:none;
     }
     .mobile-nav button {
       background:rgba(255,255,255,0.05);
@@ -107,6 +112,15 @@
     .mobile-nav button:hover {
       background:#fff;
       color:#000;
+    }
+
+    /* fix Home & Menu button alignment in mobile */
+    .mobile-nav a button,
+    .mobile-nav button {
+      display:inline-block;
+      vertical-align:middle;
+      line-height:1.4;
+      padding:6px 14px;
     }
 
     /* On mobile & tablets hide normal nav and show mobile-nav */
