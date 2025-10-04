@@ -20,8 +20,8 @@
     body {
       margin:0; padding:0;
       font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg); /* original black background */
-      color:var(--white-text);     /* white text */
+      background:var(--black-bg);
+      color:var(--white-text);
       line-height:1.6;
       text-align:center;
       font-size:var(--base-font);
@@ -86,12 +86,47 @@
     .mobile-nav {
       display:none; /* hidden by default on desktop */
     }
-    .mobile-nav .menu-links {
-      display:none;
-      flex-direction:column;
-      margin-top:10px;
-      gap:8px;
+
+    /* Top buttons container */
+    .mobile-nav > div {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* vertical center */
+      gap: 10px;
     }
+
+    /* Buttons styling */
+    .mobile-nav button {
+      display: block;
+      margin: 0;
+      padding: 6px 14px;
+      line-height: 1.4;
+      background: rgba(255,255,255,0.05);
+      color: var(--white-text);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .mobile-nav button:hover {
+      background:#fff;
+      color:#000;
+    }
+
+    /* Mobile menu links with smooth slide */
+    .mobile-nav .menu-links {
+      max-height: 0;              /* hidden by default */
+      overflow: hidden;
+      flex-direction: column;
+      margin-top: 10px;
+      gap: 8px;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-nav .menu-links.active {
+      max-height: 500px; /* enough to show all links */
+    }
+
     .mobile-nav .menu-links a {
       display:block;
       color:var(--white-text);
@@ -100,32 +135,10 @@
       border-radius:4px;
       text-decoration:none;
     }
-    .mobile-nav button {
-      background:rgba(255,255,255,0.05);
-      color:var(--white-text);
-      border:none;
-      padding:6px 14px;
-      border-radius:4px;
-      font-size:var(--base-font);
-      cursor:pointer;
-    }
-    .mobile-nav button:hover {
-      background:#fff;
-      color:#000;
-    }
-
-    /* fix Home & Menu button alignment in mobile */
-    .mobile-nav a button,
-    .mobile-nav button {
-      display:inline-block;
-      vertical-align:middle;
-      line-height:1.4;
-      padding:6px 14px;
-    }
 
     /* On mobile & tablets hide normal nav and show mobile-nav */
     @media (max-width: 768px) {
-      nav { display:none; } /* hide normal nav */
+      nav { display:none; }
       .mobile-nav { display:flex; flex-direction:column; align-items:center; }
     }
 
@@ -161,8 +174,10 @@
 
   <!-- Mobile/Tablet simplified nav -->
   <div class="mobile-nav">
-    <div style="display:flex; gap:10px; justify-content:center;">
-      <a href="index.html"><button>Home</button></a>
+    <div>
+      <!-- Home button -->
+      <button onclick="location.href='index.html'">Home</button>
+      <!-- Menu button -->
       <button onclick="toggleMenu()">Menu</button>
     </div>
     <div class="menu-links" id="mobileMenuLinks">
@@ -186,7 +201,7 @@
 <script>
   function toggleMenu(){
     const menu = document.getElementById('mobileMenuLinks');
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    menu.classList.toggle('active'); // toggles smooth slide
   }
 </script>
 
