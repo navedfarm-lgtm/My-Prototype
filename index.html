@@ -9,7 +9,6 @@
     :root {
       --black-bg:#000;
       --white-text:#fff;
-      --green-accent:#0f0;
       --base-font: clamp(14px, 2vw, 18px);
       --heading-font: clamp(22px, 3vw, 36px);
       --subheading-font: clamp(18px, 2.5vw, 28px);
@@ -87,38 +86,32 @@
       margin-bottom: 10px;
     }
 
+    /* Human eye shaped button */
     .mobile-nav button {
       display: block;
-      width: 120px; 
-      padding: 8px 14px;
-      line-height: 1.4;
+      width: 140px;
+      padding: 10px 14px;
       background: rgba(255,255,255,0.05);
       color: var(--white-text);
       border: none;
-      border-radius: 4px;
+      border-radius: 50% / 25%; /* oval, like human eye */
       cursor: pointer;
       transition: all 0.3s ease;
-      text-transform: uppercase; 
+      text-transform: uppercase;
       font-size: var(--base-font);
-      /* Eye-shaped shadow: horizontally elongated */
+      /* layered eye shape glow */
       box-shadow:
-        -8px 0 15px rgba(255,255,255,0.5),
-         8px 0 15px rgba(255,255,255,0.5),
-        -4px 0 20px rgba(255,255,255,0.4) inset,
-         4px 0 20px rgba(255,255,255,0.4) inset,
-         0 0 10px rgba(255,255,255,0.3);
-      /* Slight text glow */
-      text-shadow: 0 0 2px rgba(255,255,255,0.5),
-                   0 0 4px rgba(255,255,255,0.4);
+        0 0 0 2px rgba(255,255,255,0.4),   /* thin inner border */
+        0 0 8px rgba(255,255,255,0.5),     /* main glow */
+        0 0 20px rgba(255,255,255,0.3) inset; /* subtle inner glow */
+      text-shadow: 0 0 2px rgba(255,255,255,0.5); /* subtle text glow */
     }
 
     .mobile-nav button:hover {
       box-shadow:
-        -12px 0 25px rgba(255,255,255,0.8),
-         12px 0 25px rgba(255,255,255,0.8),
-        -6px 0 25px rgba(255,255,255,0.6) inset,
-         6px 0 25px rgba(255,255,255,0.6) inset,
-         0 0 15px rgba(255,255,255,0.5);
+        0 0 0 2px rgba(255,255,255,0.6),
+        0 0 15px rgba(255,255,255,0.8),
+        0 0 25px rgba(255,255,255,0.5) inset;
     }
 
     .mobile-nav .menu-links {
