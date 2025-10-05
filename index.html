@@ -13,9 +13,7 @@
       --heading-font: clamp(22px, 3vw, 36px);
       --subheading-font: clamp(18px, 2.5vw, 28px);
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin:0; padding:0;
       font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
@@ -25,12 +23,10 @@
       text-align:center;
       font-size:var(--base-font);
     }
-
     header {
       text-align:center;
       padding:10px 2%;
     }
-
     header img.logo {
       max-width:clamp(150px,15vw,250px);
       width:40%;
@@ -40,7 +36,6 @@
       margin-left:auto;
       margin-right:auto;
     }
-
     header .tagline {
       font-size: clamp(12px, 2vw, 20px);
       font-weight: 600;
@@ -55,7 +50,6 @@
         0 0 15px rgba(255,255,255,0.6),
         0 0 20px rgba(255,255,255,0.5);
     }
-
     nav {
       display:flex; 
       justify-content:center;
@@ -63,7 +57,6 @@
       flex-wrap:wrap; 
       margin-bottom:20px;
     }
-
     nav a {
       text-decoration:none; 
       color:var(--white-text);
@@ -73,16 +66,13 @@
       background:rgba(255,255,255,0.05);
       transition: all 0.3s ease;
     }
-
     nav a:hover {
       color:#000;
       background:#fff;
       animation: glowPulse 1s ease-in-out infinite alternate;
     }
-
     .mobile-nav { display:none; }
     .mobile-nav > div { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:10px; }
-
     .mobile-nav button {
       display:block;
       width:140px;
@@ -98,14 +88,12 @@
       box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
       text-shadow:0 0 2px rgba(255,255,255,0.5);
     }
-
     .mobile-nav button.hover-active {
       background: rgba(255,255,255,0.1);
       color:#000;
       box-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 12px rgba(255,255,255,0.3) inset;
       animation: glowPulse 1s ease-in-out infinite alternate;
     }
-
     .mobile-nav .menu-links {
       max-height:0;
       overflow:hidden;
@@ -118,13 +106,11 @@
       transition: max-height 0.3s ease, background 0.3s ease;
       padding:0 5px;
     }
-
     .mobile-nav .menu-links.active { max-height:500px; }
     .mobile-nav .menu-links a { display:block; color:var(--white-text); background: rgba(255,255,255,0.05); padding:5px 10px; border-radius:4px; text-decoration:none; transition: all 0.3s ease; font-size: var(--base-font); text-shadow:0 0 2px rgba(255,255,255,0.5);}
     .mobile-nav .menu-links a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
 
     @keyframes glowPulse { 0%{box-shadow:0 0 5px rgba(255,255,255,0.5);} 50%{box-shadow:0 0 12px rgba(255,255,255,0.8);} 100%{box-shadow:0 0 5px rgba(255,255,255,0.5);} }
-
     .mobile-nav button:active, .mobile-nav .menu-links a:active { transform: scale(0.97); }
 
     @media (max-width:768px){
@@ -135,11 +121,9 @@
     }
 
     main { max-width:900px; margin:20px auto; padding:0 15px; text-align:center; }
-
-    /* Web Blog & Updates uniform style */
-    h1, h2 { font-size: var(--heading-font); margin:15px 0; text-align:center; }
-    h2 { font-size: var(--subheading-font); margin:15px 0; }
-    p, .section-content { font-size: var(--base-font); line-height:1.6; margin-bottom:15px; text-align:center; }
+    h1 { font-size: var(--heading-font); margin:15px 0; text-align:center; }
+    h2 { font-size: var(--subheading-font); margin:5px 0 20px; text-align:center; font-weight:normal; opacity:0.85; }
+    p { font-size: var(--base-font); line-height:1.6; margin-bottom:15px; text-align:center; }
   </style>
 </head>
 <body>
@@ -181,6 +165,7 @@
 
 <main>
   <h1>Welcome to XYZ Pvt Ltd</h1>
+  <h2>Your one-stop portal for online services & information</h2>
   <p>
     We provide fast, reliable, and easy access to essential online services and information 
     for people worldwide. By offering intuitive, step-by-step guidance, we make it simple 
@@ -194,13 +179,8 @@ const menuLinks = document.getElementById('mobileMenuLinks');
 
 menuButton.addEventListener('click', function(e){
   e.stopPropagation();
-  if(menuLinks.classList.contains('active')){
-    menuLinks.classList.remove('active');
-    menuButton.classList.remove('hover-active');
-  } else {
-    menuLinks.classList.add('active');
-    menuButton.classList.add('hover-active');
-  }
+  menuLinks.classList.toggle('active');
+  menuButton.classList.toggle('hover-active');
 });
 
 document.addEventListener('click', function(){
