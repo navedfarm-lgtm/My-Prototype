@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - XYZ Pvt Ltd</title>
+  <title>Web Blog & Updates - XYZ Pvt Ltd</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
@@ -92,7 +92,6 @@
       margin-bottom: 10px;
     }
 
-    /* Human-eye shaped button */
     .mobile-nav button {
       display: block;
       width: 140px;
@@ -112,7 +111,6 @@
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
 
-    /* Hover effect or active glow when menu open */
     .mobile-nav button.hover-active {
       background: rgba(255,255,255,0.1);
       color: #000;
@@ -185,11 +183,37 @@
       max-width:900px; 
       margin:20px auto; 
       padding:0 15px;
+      text-align:center;
     }
 
     h1 { font-size:var(--heading-font); margin:15px 0; }
     h2 { font-size:var(--subheading-font); margin:15px 0; }
     p  { font-size:var(--base-font); margin:10px 0; }
+
+    .section-content { margin-bottom: 40px; }
+
+    .social-icons img {
+      width:30px;
+      height:30px;
+      margin:0 5px;
+      filter: invert(1);
+    } 
+
+    .social-icons a img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.2);
+      filter: invert(0) drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff);
+    }
+
+    .download-logo, .disclaimer-logo {
+      width:120px;
+      height:auto;
+      margin: 15px 0;
+    }
+
   </style>
 </head>
 <body>
@@ -205,9 +229,9 @@
     <a href="contact.html">Contact</a>
     <a href="download.html">Download</a>
     <a href="webblogupdates.html">Web Blog & Updates</a>
-    <a href="privacypolicy">Privacy & Policy</a>
-    <a href="termncondition">Term & Condition</a>
-    <a href="disclaimer">Disclaimer</a>
+    <a href="privacypolicy.html">Privacy & Policy</a>
+    <a href="termncondition.html">Term & Condition</a>
+    <a href="disclaimer.html">Disclaimer</a>
   </nav>
 
   <div class="mobile-nav">
@@ -217,25 +241,93 @@
     </div>
     <div class="menu-links" id="mobileMenuLinks">
       <a href="index.html">Home</a>
-    <a href="productnservices.html">Product & Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="download.html">Download</a>
-    <a href="webblogupdates.html">Web Blog & Updates</a>
-    <a href="privacypolicy">Privacy & Policy</a>
-    <a href="termncondition">Term & Condition</a>
-    <a href="disclaimer">Disclaimer</a>
+      <a href="productnservices.html">Product & Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="download.html">Download</a>
+      <a href="webblogupdates.html">Web Blog & Updates</a>
+      <a href="privacypolicy.html">Privacy & Policy</a>
+      <a href="termncondition.html">Term & Condition</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
 </header>
 
 <main>
-  <h1>Welcome to XYZ Pvt Ltd</h1>
-  <p>
-    We provide fast, reliable, and easy access to essential online services and information 
-    for people worldwide. By offering intuitive, step-by-step guidance, we make it simple 
-    for anyone to find and use.
-  </p>
+  <main>
+  <div class="webblog-section">
+  <h2>Web Blog & Updates</h2>
+
+  <main>
+  <!-- Blogs & Insights Section -->
+  <div style="text-align:center; margin-bottom:40px;">
+    <h2>Blogs & Insights</h2>
+    <div class="section-content">
+      Personal blogs | Industry insights | Opinion pieces & guides
+    </div>
+  </div>
+
+  <!-- News & Updates Section -->
+  <div style="text-align:center; margin-bottom:40px;">
+    <h2>News & Updates</h2>
+    <div class="section-content">
+      National & international news | Business and finance news | Technology and science news | Health & lifestyle news
+    </div>
+  </div>
+
+  <!-- Web Blog & Updates Section -->
+  <div style="text-align:center; margin-bottom:40px;">
+    <h2>Web Blog & Updates</h2>
+    <div class="section-content">
+      Informs users about new content, guides, and upcoming articles.
+    </div>
+  </div>
+
+  <!-- Short Updates Section -->
+  <div style="text-align:center; margin-bottom:40px;">
+    <h2>Short Updates</h2>
+    <div class="section-content">
+      “Coming Soon” notifications for new features, blog posts, or site updates.
+    </div>
+  </div>
+</main>
+
+<style>
+/* Uniform font size and centered main titles */
+h1, h2 {
+  font-size: 1.2rem; /* Normal size for main titles */
+  margin: 12px 0;
+  text-align: center; /* Center-aligned */
+}
+
+/* Section content normal font */
+.section-content, p {
+  font-size: 1rem; /* Standard paragraph size */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center; /* Centered content */
+}
+</style>
+
+
+</main>
+
+  <h2>Download & Share</h2>
+  <div class="section-content">
+    <img src="logo.png" alt="XYZ Logo" class="download-logo">
+    <p>Download the XYZ App<br>Install now and enjoy free access to all our digital services.</p>
+    <p>Share with friends:</p>
+    <div class="social-icons">
+      <a href="https://wa.me/?text=Check%20out%20this%20website" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+      <a href="https://twitter.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter/X"></a>
+      <a href="https://www.youtube.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://telegram.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram"></a>
+    </div>
+  </div>
+
 </main>
 
 <script>
