@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - XYZ Pvt Ltd</title>
+  <title>Disclaimer - XYZ Pvt Ltd</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
@@ -26,15 +26,11 @@
       font-size:var(--base-font);
     }
 
-    header {
-      text-align:center;
-      padding:10px 2%;
-    }
+    header { text-align:center; padding:10px 2%; }
 
     header img.logo {
       max-width:clamp(150px,15vw,250px);
-      width:40%;
-      height:auto;
+      width:40%; height:auto;
       margin-bottom:10px;
       display:block;
       margin-left:auto;
@@ -48,7 +44,6 @@
       color: rgba(255, 255, 255, 0.95);
       margin-bottom: 15px;
       text-transform: uppercase;         
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-shadow: 
         0 0 5px rgba(255,255,255,0.8),
         0 0 10px rgba(255,255,255,0.7),
@@ -80,82 +75,37 @@
       animation: glowPulse 1s ease-in-out infinite alternate;
     }
 
-    .mobile-nav {
-      display:none; 
-    }
-
-    .mobile-nav > div {
-      display: flex;
-      flex-direction: column; 
-      align-items: center;    
-      gap: 10px;              
-      margin-bottom: 10px;
-    }
-
-    /* Human-eye shaped button */
+    .mobile-nav { display:none; }
+    .mobile-nav > div { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:10px; }
     .mobile-nav button {
-      display: block;
-      width: 140px;
-      padding: 10px 14px;
+      display:block; width:140px; padding:10px 14px;
       background: rgba(255,255,255,0.05);
-      color: var(--white-text);
-      border: none;
-      border-radius: 50% / 25%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      font-size: var(--base-font);
-      box-shadow:
-        0 0 0 2px rgba(255,255,255,0.4),
-        0 0 8px rgba(255,255,255,0.5),
-        0 0 20px rgba(255,255,255,0.3) inset;
+      color: var(--white-text); border:none; border-radius:50% / 25%;
+      cursor:pointer; transition: all 0.3s ease; text-transform:uppercase;
+      font-size:var(--base-font);
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
-
-    /* Hover effect or active glow when menu open */
     .mobile-nav button.hover-active {
-      background: rgba(255,255,255,0.1);
-      color: #000;
-      box-shadow:
-        0 0 6px rgba(255,255,255,0.4),
-        0 0 12px rgba(255,255,255,0.3) inset;
+      background: rgba(255,255,255,0.1); color:#000;
+      box-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 12px rgba(255,255,255,0.3) inset;
       animation: glowPulse 1s ease-in-out infinite alternate;
     }
-
     .mobile-nav .menu-links {
-      max-height: 0;              
-      overflow: hidden;
-      flex-direction: column;
-      margin-top: 10px;
-      gap: 8px;
-      background: rgba(30,30,30,0.95);  
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4); 
-      border-radius: 6px;
-      transition: max-height 0.3s ease, background 0.3s ease;
-      padding: 0 5px;
+      max-height:0; overflow:hidden; flex-direction:column; margin-top:10px; gap:8px;
+      background: rgba(30,30,30,0.95);
+      box-shadow:0 4px 10px rgba(0,0,0,0.4); border-radius:6px;
+      transition:max-height 0.3s ease, background 0.3s ease;
+      padding:0 5px;
     }
-
-    .mobile-nav .menu-links.active {
-      max-height: 500px; 
-    }
-
+    .mobile-nav .menu-links.active { max-height:500px; }
     .mobile-nav .menu-links a {
-      display:block;
-      color:var(--white-text);
-      background: rgba(255,255,255,0.05);
-      padding:5px 10px;
-      border-radius:4px;
-      text-decoration:none;
-      transition: all 0.3s ease;
-      font-size: var(--base-font);
+      display:block; color:var(--white-text); background: rgba(255,255,255,0.05);
+      padding:5px 10px; border-radius:4px; text-decoration:none;
+      transition: all 0.3s ease; font-size: var(--base-font);
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
-
-    .mobile-nav .menu-links a:hover {
-      color: #000;
-      background: #fff;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
+    .mobile-nav .menu-links a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
 
     @keyframes glowPulse {
       0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
@@ -163,33 +113,19 @@
       100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
     }
 
-    .mobile-nav button:active,
-    .mobile-nav .menu-links a:active {
-      transform: scale(0.97);
+    .mobile-nav button:active,.mobile-nav .menu-links a:active { transform:scale(0.97); }
+
+    @media (max-width:768px){
+      nav{display:none;}
+      .mobile-nav{display:flex;flex-direction:column;align-items:center;}
+      .mobile-nav button{font-size:calc(var(--base-font)-1px);}
+      .mobile-nav .menu-links a{font-size:calc(var(--base-font)+1px);}
     }
 
-    @media (max-width: 768px) {
-      nav { display:none; }
-      .mobile-nav { display:flex; flex-direction:column; align-items:center; }
-
-      .mobile-nav button {
-        font-size: calc(var(--base-font) - 1px);
-      }
-
-      .mobile-nav .menu-links a {
-        font-size: calc(var(--base-font) + 1px);
-      }
-    }
-
-    main {
-      max-width:900px; 
-      margin:20px auto; 
-      padding:0 15px;
-    }
-
-    h1 { font-size:var(--heading-font); margin:15px 0; }
-    h2 { font-size:var(--subheading-font); margin:15px 0; }
-    p  { font-size:var(--base-font); margin:10px 0; }
+    main { max-width:900px; margin:20px auto; padding:0 15px; text-align:center; }
+    h1 { font-size:var(--heading-font); margin:15px 0; text-align:center; }
+    h2 { font-size:var(--subheading-font); margin:15px 0; text-align:center; }
+    .section-content { font-size:var(--base-font); margin-bottom:40px; text-align:center; }
   </style>
 </head>
 <body>
@@ -205,9 +141,9 @@
     <a href="contact.html">Contact</a>
     <a href="download.html">Download</a>
     <a href="webblogupdates.html">Web Blog & Updates</a>
-    <a href="privacypolicy">Privacy & Policy</a>
-    <a href="termncondition">Term & Condition</a>
-    <a href="disclaimer">Disclaimer</a>
+    <a href="privacypolicy.html">Privacy & Policy</a>
+    <a href="termncondition.html">Term & Condition</a>
+    <a href="disclaimer.html">Disclaimer</a>
   </nav>
 
   <div class="mobile-nav">
@@ -217,25 +153,85 @@
     </div>
     <div class="menu-links" id="mobileMenuLinks">
       <a href="index.html">Home</a>
-    <a href="productnservices.html">Product & Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="download.html">Download</a>
-    <a href="webblogupdates.html">Web Blog & Updates</a>
-    <a href="privacypolicy">Privacy & Policy</a>
-    <a href="termncondition">Term & Condition</a>
-    <a href="disclaimer">Disclaimer</a>
+      <a href="productnservices.html">Product & Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="download.html">Download</a>
+      <a href="webblogupdates.html">Web Blog & Updates</a>
+      <a href="privacypolicy.html">Privacy & Policy</a>
+      <a href="termncondition.html">Term & Condition</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
 </header>
 
 <main>
-  <h1>Welcome to XYZ Pvt Ltd</h1>
-  <p>
-    We provide fast, reliable, and easy access to essential online services and information 
-    for people worldwide. By offering intuitive, step-by-step guidance, we make it simple 
-    for anyone to find and use.
-  </p>
+  <h1>Website Disclaimer</h1>
+
+  <div>
+    <h2>⚠️ Disclaimer</h2>
+    <div class="section-content">
+  
+All services and resources provided on this website are completely free of charge.
+
+
+We do not accept any form of payment for our services.
+
+We do not offer paid services via Telegram channels, phone calls to customers, or through any promotional offers via SMS or email links.
+
+No sign-up or registration is required to access our core resources.
+<div>
+    <h2>Aware of fraudulent websites</h2>
+    <div class="section-content">
+      This is our sole and official website. We do not operate any other website under the same or a similar name.
+
+If you see any unethical conduct or suspicious links claiming to be associated with us, please verify first and immediately contact us at our official email address: xyz@gmail.com.
+
+
+Personal information is not collected unless it is voluntarily and knowingly provided by the user.
+
+The website owners and affiliates are not liable for any direct, indirect, incidental, or consequential damages arising from the use of this website or its resources.
+for any query write to us : xyz@gmail.com.
+
+    </div>
+  </div>
+
+ 
+
+
+    </div>
+  </div>
+
+  <div>
+    <h2>Non-Affiliation Statement</h2>
+    <div class="section-content">
+      The website is not affiliated with any government, agency, private organization, or company unless explicitly stated.
+    </div>
+  </div>
+
+  <div>
+    <h2>Limitation of Liability</h2>
+    <div class="section-content">
+      Errors, omissions, or inaccuracies in content, loss of data, or reliance on third-party information are at user discretion.
+    </div>
+  </div>
+
+  <div>
+    <h2>Updates to This Policy</h2>
+    <div class="section-content">
+      Any updates will be posted on the site; continued use constitutes acceptance.
+    </div>
+  </div>
+
+  <div>
+    <h2>User Responsibility & Ethical Awareness</h2>
+    <div class="section-content">
+      Users must use services responsibly, ethically, and legally.
+    </div>
+  </div>
+<h2>THANX</h2>
+BE ALERT BE SECURE BE SAFE
+
 </main>
 
 <script>
@@ -244,7 +240,6 @@ const menuLinks = document.getElementById('mobileMenuLinks');
 
 menuButton.addEventListener('click', function(e){
   e.stopPropagation();
-  
   if(menuLinks.classList.contains('active')){
     menuLinks.classList.remove('active');
     menuButton.classList.remove('hover-active');

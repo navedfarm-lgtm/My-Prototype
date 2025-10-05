@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>   
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -26,19 +26,14 @@
       font-size:var(--base-font);
     }
 
-    header {
-      text-align:center;
-      padding:10px 2%;
-    }
+    header { text-align:center; padding:10px 2%; }
 
     header img.logo {
       max-width:clamp(150px,15vw,250px);
-      width:40%;
-      height:auto;
+      width:40%; height:auto;
       margin-bottom:10px;
       display:block;
-      margin-left:auto;
-      margin-right:auto;
+      margin-left:auto; margin-right:auto;
     }
 
     header .tagline {
@@ -48,7 +43,6 @@
       color: rgba(255, 255, 255, 0.95);
       margin-bottom: 15px;
       text-transform: uppercase;         
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-shadow: 
         0 0 5px rgba(255,255,255,0.8),
         0 0 10px rgba(255,255,255,0.7),
@@ -56,163 +50,53 @@
         0 0 20px rgba(255,255,255,0.5);
     }
 
-    nav {
-      display:flex; 
-      justify-content:center;
-      gap:clamp(10px,2vw,20px);
-      flex-wrap:wrap; 
-      margin-bottom:20px;
-    }
+    nav { display:flex; justify-content:center; gap:clamp(10px,2vw,20px); flex-wrap:wrap; margin-bottom:20px; }
+    nav a { text-decoration:none; color:var(--white-text); padding:5px 10px; border-radius:4px; font-size:var(--base-font); background:rgba(255,255,255,0.05); transition: all 0.3s ease; }
+    nav a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
 
-    nav a {
-      text-decoration:none; 
-      color:var(--white-text);
-      padding:5px 10px; 
-      border-radius:4px;
-      font-size:var(--base-font);
-      background:rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      color:#000;
-      background:#fff;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-
-    .mobile-nav {
-      display:none; 
-    }
-
-    .mobile-nav > div {
-      display: flex;
-      flex-direction: column; 
-      align-items: center;    
-      gap: 10px;              
-      margin-bottom: 10px;
-    }
-
+    .mobile-nav { display:none; }
+    .mobile-nav > div { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 10px; }
     .mobile-nav button {
-      display: block;
-      width: 140px;
-      padding: 10px 14px;
-      background: rgba(255,255,255,0.05);
-      color: var(--white-text);
-      border: none;
-      border-radius: 50% / 25%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
+      display: block; width: 140px; padding: 10px 14px;
+      background: rgba(255,255,255,0.05); color: var(--white-text);
+      border: none; border-radius: 50% / 25%; cursor: pointer;
+      transition: all 0.3s ease; text-transform: uppercase;
       font-size: var(--base-font);
-      box-shadow:
-        0 0 0 2px rgba(255,255,255,0.4),
-        0 0 8px rgba(255,255,255,0.5),
-        0 0 20px rgba(255,255,255,0.3) inset;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
     }
-
-    .mobile-nav button.hover-active {
-      background: rgba(255,255,255,0.1);
-      color: #000;
-      box-shadow:
-        0 0 6px rgba(255,255,255,0.4),
-        0 0 12px rgba(255,255,255,0.3) inset;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
+    .mobile-nav button.hover-active { background: rgba(255,255,255,0.1); color: #000; box-shadow:0 0 6px rgba(255,255,255,0.4),0 0 12px rgba(255,255,255,0.3) inset; animation: glowPulse 1s ease-in-out infinite alternate; }
 
     .mobile-nav .menu-links {
-      max-height: 0;              
-      overflow: hidden;
-      flex-direction: column;
-      margin-top: 10px;
-      gap: 8px;
-      background: rgba(30,30,30,0.95);  
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4); 
-      border-radius: 6px;
-      transition: max-height 0.3s ease, background 0.3s ease;
-      padding: 0 5px;
+      max-height: 0; overflow: hidden; flex-direction: column; margin-top: 10px; gap: 8px;
+      background: rgba(30,30,30,0.95); box-shadow: 0 4px 10px rgba(0,0,0,0.4); border-radius: 6px;
+      transition: max-height 0.3s ease, background 0.3s ease; padding: 0 5px;
     }
+    .mobile-nav .menu-links.active { max-height: 500px; }
+    .mobile-nav .menu-links a { display:block; color:var(--white-text); background: rgba(255,255,255,0.05); padding:5px 10px; border-radius:4px; text-decoration:none; transition: all 0.3s ease; font-size: var(--base-font); text-shadow: 0 0 2px rgba(255,255,255,0.5); }
+    .mobile-nav .menu-links a:hover { color: #000; background: #fff; animation: glowPulse 1s ease-in-out infinite alternate; }
 
-    .mobile-nav .menu-links.active {
-      max-height: 500px; 
-    }
+    @keyframes glowPulse { 0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); } 50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); } 100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); } }
 
-    .mobile-nav .menu-links a {
-      display:block;
-      color:var(--white-text);
-      background: rgba(255,255,255,0.05);
-      padding:5px 10px;
-      border-radius:4px;
-      text-decoration:none;
-      transition: all 0.3s ease;
-      font-size: var(--base-font);
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-
-    .mobile-nav .menu-links a:hover {
-      color: #000;
-      background: #fff;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-      50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
-      100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-    }
-
-    .mobile-nav button:active,
-    .mobile-nav .menu-links a:active {
-      transform: scale(0.97);
-    }
+    .mobile-nav button:active, .mobile-nav .menu-links a:active { transform: scale(0.97); }
 
     @media (max-width: 768px) {
       nav { display:none; }
       .mobile-nav { display:flex; flex-direction:column; align-items:center; }
-
-      .mobile-nav button {
-        font-size: calc(var(--base-font) - 1px);
-      }
-
-      .mobile-nav .menu-links a {
-        font-size: calc(var(--base-font) + 1px);
-      }
+      .mobile-nav button { font-size: calc(var(--base-font) - 1px); }
+      .mobile-nav .menu-links a { font-size: calc(var(--base-font) + 1px); }
     }
 
-    main {
-      max-width:900px; 
-      margin:20px auto; 
-      padding:0 15px;
-      text-align:center;
-    }
-
-    h1,h2 { font-size:var(--base-font); margin:15px 0; } 
-    h3 { font-size:1.2rem; margin:10px 0; }
-    p { font-size:var(--base-font); margin:10px 0; }
-
+    main { max-width:900px; margin:20px auto; padding:0 15px; text-align:center; }
+    h1 { font-size: var(--heading-font); margin:15px 0; } 
+    h2 { font-size: var(--subheading-font); margin:15px 0; }
+    p { font-size: var(--base-font); margin:10px 0; }
     .section-content { margin-bottom: 40px; }
 
-    .social-icons img {
-      width:30px;
-      height:30px;
-      margin:0 5px;
-      filter: invert(1);
-    } 
-    /* Hover effect for social media icons */
-      .social-icons a img {
-       transition: transform 0.3s ease, filter 0.3s ease;
-    }
+    .social-icons img { width:30px; height:30px; margin:0 5px; filter: invert(1); transition: transform 0.3s ease, filter 0.3s ease; } 
+    .social-icons a:hover img { transform: scale(1.2); filter: invert(0) drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff); }
 
-     .social-icons a:hover img {
-      transform: scale(1.2);
-      filter: invert(0) drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff);
-    }
-  
-    .download-logo, .disclaimer-logo {
-      width:120px;
-      height:auto;
-      margin: 15px 0;
-    }
+    .download-logo, .disclaimer-logo { width:120px; height:auto; margin: 15px 0; }
 
   </style>
 </head>
@@ -259,14 +143,8 @@ const menuLinks = document.getElementById('mobileMenuLinks');
 
 menuButton.addEventListener('click', function(e){
   e.stopPropagation();
-  
-  if(menuLinks.classList.contains('active')){
-    menuLinks.classList.remove('active');
-    menuButton.classList.remove('hover-active');
-  } else {
-    menuLinks.classList.add('active');
-    menuButton.classList.add('hover-active');
-  }
+  menuLinks.classList.toggle('active');
+  menuButton.classList.toggle('hover-active');
 });
 
 document.addEventListener('click', function(){
@@ -280,8 +158,7 @@ menuLinks.addEventListener('click', function(e){
 </script>
 
 <main>
-  <!-- NEW CONTENT START -->
-
+  <!-- Updated Content -->
   <h1>Website Overview & Vision</h1>
   <div class="section-content">
     <p><em>"Information is Key to Success"</em></p>
@@ -392,136 +269,106 @@ menuLinks.addEventListener('click', function(e){
     <p>🛡️ © 2025 Xyz Pvt Ltd. All Rights Reserved.<br>[Your Company Name]<br>Design & Web Development by M.D. Naved</p>
   </div>
 
-  <!-- Disclaimer Section Start -->
-<div style="text-align:center; margin-top: 40px;">
-  <img src="logo.png" alt="XYZ Logo" class="disclaimer-logo">
-  <h2>⚠️ Disclaimer</h2>
-  
-  <h2>Effective Date</h2>
-  <div class="section-content">
-    [Insert Date]
-  </div>
-
- <h2>Non-Affiliation Statement</h2>
-<div class="section-content">
-  We are not affiliated with, sponsored by, or partnered with any government, agency, private organization, or company, unless explicitly stated.
-  <br><br>
-  <strong>Details:</strong> Any logos, trademarks, or references used on this website are for informational purposes only and do not imply endorsement. Users should independently verify affiliations before relying on the content.
-  <br><br>
-  <strong>Legal Note:</strong> Misrepresentation of affiliation or endorsement is a violation of trademark and intellectual property laws under the <em>Trade Marks Act, 1999 (India)</em> and related international regulations.
-</div>
-
+  <!-- Disclaimer Section -->
+  <div style="text-align:center; margin-top: 40px;">
+    <img src="logo.png" alt="XYZ Logo" class="disclaimer-logo">
+    <h2>⚠️ Disclaimer</h2>
+    <h2>Effective Date</h2>
+    <div class="section-content">[Insert Date]</div>
+    <h2>Non-Affiliation Statement</h2>
+    <div class="section-content">
+      We are not affiliated with, sponsored by, or partnered with any government, agency, private organization, or company, unless explicitly stated.
+      <br><br>
+      <strong>Details:</strong> Any logos, trademarks, or references used on this website are for informational purposes only and do not imply endorsement. Users should independently verify affiliations before relying on the content.
+      <br><br>
+      <strong>Legal Note:</strong> Misrepresentation of affiliation or endorsement is a violation of trademark and intellectual property laws under the <em>Trade Marks Act, 1999 (India)</em> and related international regulations.
+    </div>
+    <!-- Free Services & Data Protection Section -->
 <h2>Free Services & Data Protection</h2>
 <div class="section-content">
-  All services and resources on this website are provided free of charge. We do not collect personally identifiable information (PII) unless voluntarily provided.
-  <br><br>
-  <strong>Details:</strong> Optional forms or subscriptions collect minimal data solely for service improvements. Your data is never sold, shared, or used for marketing without consent. Standard security measures are applied to protect any submitted information.
-  <br><br>
-  <strong>Legal & Regulatory Reference:</strong> Data collection and processing comply with the <em>Digital Personal Data Protection Act, 2023</em>, <em>Information Technology (IT) Act, 2000</em>, <em>IT Rules, 2011</em>, and other government-issued privacy guidelines. Users have the right to access, correct, or delete personal data.
-</div>
+  <p>All services and resources on this website are provided free of charge. We do not collect personally identifiable information (PII) unless voluntarily provided.</p>
 
-<h2>Information Accuracy & Use</h2>
-<div class="section-content">
-  Content is for general informational purposes only. All efforts are made to ensure accuracy, but no guarantees regarding completeness or timeliness are provided.
-  <br><br>
-  <strong>Details:</strong> Users must independently verify critical information before relying on it. This website does not provide professional, medical, legal, or financial advice. Use of content is entirely at your own risk.
-  <br><br>
-  <strong>Legal Note:</strong> Reliance on website content is governed by the <em>Consumer Protection Act, 2019</em> and other relevant laws. Users are encouraged to seek professional guidance when needed.
-</div>
+  <p><strong>Details:</strong> Optional forms or subscriptions collect minimal data solely for service improvements. Your data is never sold, shared, or used for marketing without consent. Standard security measures are applied to protect any submitted information.</p>
 
-<h2>External Links & Third-Party Content</h2>
-<div class="section-content">
-  Links may direct users to external websites, third-party services, or partner content.
-  <br><br>
-  <strong>Details:</strong> We do not control or endorse external content. Users should review the privacy policies, terms of use, and safety measures of any external websites visited.
-  <br><br>
-  <strong>Legal Reference:</strong> Our liability for third-party content is limited under <em>IT Act, 2000, Section 79</em>, which protects intermediaries when due diligence is followed.
-</div>
+  <p><strong>Legal & Regulatory Reference:</strong> Data collection and processing comply with the Digital Personal Data Protection Act, 2023, Information Technology (IT) Act, 2000, IT Rules, 2011, and other government-issued privacy guidelines. Users have the right to access, correct, or delete personal data.</p>
 
-<h2>User Responsibility & Ethical Awareness</h2>
-<div class="section-content">
-  Users must use all services, downloads, or resources responsibly, ethically, and legally.
-  <br><br>
-  <strong>Details:</strong> Misuse, illegal activity, or unethical behavior using the site’s resources is the sole responsibility of the user. Users should act in a safe, informed, and respectful manner.
-  <br><br>
-  <strong>Legal Reference:</strong> Users must comply with <em>IT Act, 2000</em>, <em>Copyright Act, 1957</em>, and other applicable Indian laws. Unauthorized activity may result in civil or criminal penalties.
-</div>
+  <h2>Information Accuracy & Use</h2>
+  <div class="section-content">
+    <p>Content is for general informational purposes only. All efforts are made to ensure accuracy, but no guarantees regarding completeness or timeliness are provided.</p>
+    <p><strong>Details:</strong> Users must independently verify critical information before relying on it. This website does not provide professional, medical, legal, or financial advice. Use of content is entirely at your own risk.</p>
+    <p><strong>Legal Note:</strong> Reliance on website content is governed by the Consumer Protection Act, 2019 and other relevant laws. Users are encouraged to seek professional guidance when needed.</p>
+  </div>
 
-<h2>User Agreement</h2>
-<div class="section-content">
-  Accessing and using this website constitutes agreement to all terms and policies outlined here.
-  <br><br>
-  <strong>Details:</strong> If you do not agree with these terms, refrain from using the website. Compliance with local laws and regulations is the responsibility of the user.
-  <br><br>
-  <strong>Legal Note:</strong> This agreement incorporates <em>IT Act, 2000</em>, <em>Copyright Act, 1957</em>, <em>Digital Personal Data Protection Act, 2023</em>, and general digital governance laws. Legal enforcement may occur if terms are violated.
-</div>
+  <h2>External Links & Third-Party Content</h2>
+  <div class="section-content">
+    <p>Links may direct users to external websites, third-party services, or partner content.</p>
+    <p><strong>Details:</strong> We do not control or endorse external content. Users should review the privacy policies, terms of use, and safety measures of any external websites visited.</p>
+    <p><strong>Legal Reference:</strong> Our liability for third-party content is limited under IT Act, 2000, Section 79, which protects intermediaries when due diligence is followed.</p>
+  </div>
 
-<h2>Limitation of Liability</h2>
-<div class="section-content">
-  The owners, operators, and affiliates of this website are not liable for any direct, indirect, incidental, or consequential damages arising from use.
-  <br><br>
-  <strong>Details:</strong> This includes errors, omissions, or inaccuracies in content, loss of data, or reliance on third-party information. Use at your own discretion.
-  <br><br>
-  <strong>Legal Reference:</strong> Liability limitations are governed by <em>IT Act, 2000</em> and general contract and tort laws.
-</div>
+  <h2>User Responsibility & Ethical Awareness</h2>
+  <div class="section-content">
+    <p>Users must use all services, downloads, or resources responsibly, ethically, and legally.</p>
+    <p><strong>Details:</strong> Misuse, illegal activity, or unethical behavior using the site’s resources is the sole responsibility of the user. Users should act in a safe, informed, and respectful manner.</p>
+    <p><strong>Legal Reference:</strong> Users must comply with IT Act, 2000, Copyright Act, 1957, and other applicable Indian laws. Unauthorized activity may result in civil or criminal penalties.</p>
+  </div>
 
-<h2>Updates to This Policy</h2>
-<div class="section-content">
-  Policy updates and changes will be posted on this page. Continued use of the website constitutes acceptance of updated terms.
-  <br><br>
-  <strong>Details:</strong> Users should periodically review this section to remain informed about modifications to data handling, disclaimers, or service provisions.
-  <br><br>
-  <strong>Legal Note:</strong> Transparency and updates are in accordance with <em>IT Rules, 2011</em> and consumer protection regulations.
-</div>
+  <h2>User Agreement</h2>
+  <div class="section-content">
+    <p>Accessing and using this website constitutes agreement to all terms and policies outlined here.</p>
+    <p><strong>Details:</strong> If you do not agree with these terms, refrain from using the website. Compliance with local laws and regulations is the responsibility of the user.</p>
+    <p><strong>Legal Note:</strong> This agreement incorporates IT Act, 2000, Copyright Act, 1957, Digital Personal Data Protection Act, 2023, and general digital governance laws. Legal enforcement may occur if terms are violated.</p>
+  </div>
 
-<h2>Digital Law & Data Privacy Guidelines</h2>
-<div class="section-content">
-  <strong>Scope:</strong> Highlights key digital laws and privacy rules applicable to website users.
-  <br><br>
-  <ul>
-    <li><strong>Digital Personal Data Protection Act, 2023:</strong> Governs collection, storage, processing, and sharing of personal data with user consent.</li>
-    <li><strong>IT Act, 2000 & IT Rules, 2011:</strong> Covers electronic communication, intermediary liability, and security practices.</li>
-    <li><strong>Consumer Protection Act, 2019:</strong> Ensures transparency and fair practice in digital services.</li>
-    <li><strong>Copyright & Intellectual Property Laws:</strong> Protect website content and prevent unauthorized reproduction.</li>
-    <li><strong>E-commerce & Online Service Rules, 2020:</strong> Ensures accurate product/service information, refunds, and ethical digital practices.</li>
-    <li><strong>Intermediary Guidelines & Digital Media Ethics Code, 2021:</strong> Mandates grievance redressal and timely removal of harmful content.</li>
-  </ul>
-</div>
+  <h2>Limitation of Liability</h2>
+  <div class="section-content">
+    <p>The owners, operators, and affiliates of this website are not liable for any direct, indirect, incidental, or consequential damages arising from use.</p>
+    <p><strong>Details:</strong> This includes errors, omissions, or inaccuracies in content, loss of data, or reliance on third-party information. Use at your own discretion.</p>
+    <p><strong>Legal Reference:</strong> Liability limitations are governed by IT Act, 2000 and general contract and tort laws.</p>
+  </div>
 
-<h2>Latest Digital Law & Compliance</h2>
-<div class="section-content">
-  <strong>Important Updates:</strong> The Digital Personal Data Protection Act, 2023 is the latest legislation governing online privacy, consent, and user data security in India.
-  <br><br>
-  <strong>Highlights:</strong>
-  <ul>
-    <li>Mandates explicit user consent for data collection and processing.</li>
-    <li>Requires grievance redressal mechanisms for users.</li>
-    <li>Penalties for non-compliance can be substantial (up to ₹5 crore or 2% of global turnover).</li>
-    <li>Applies to all online platforms collecting, storing, or processing personal data of Indian users.</li>
-  </ul>
-  Website users should understand their rights under this law and use the website responsibly.
-</div>
+  <h2>Updates to This Policy</h2>
+  <div class="section-content">
+    <p>Policy updates and changes will be posted on this page. Continued use of the website constitutes acceptance of updated terms.</p>
+    <p><strong>Details:</strong> Users should periodically review this section to remain informed about modifications to data handling, disclaimers, or service provisions.</p>
+    <p><strong>Legal Note:</strong> Transparency and updates are in accordance with IT Rules, 2011 and consumer protection regulations.</p>
+  </div>
 
-<h2>Data Collection & User Consent</h2>
-<div class="section-content">
-  We do not collect personal data unless voluntarily provided by the user.
-  <br><br>
-  <strong>Details:</strong> Any personal information collected is used solely for the purpose it was provided and is not shared with third parties without explicit consent.
-  <br><br>
-  <strong>Legal Reference:</strong> This practice aligns with the Digital Personal Data Protection Act, 2023, emphasizing the need for user consent in data collection.
-</div>
+  <h2>Digital Law & Data Privacy Guidelines</h2>
+  <div class="section-content">
+    <p><strong>Scope:</strong> Highlights key digital laws and privacy rules applicable to website users.</p>
+    <ul>
+      <li>Digital Personal Data Protection Act, 2023: Governs collection, storage, processing, and sharing of personal data with user consent.</li>
+      <li>IT Act, 2000 & IT Rules, 2011: Covers electronic communication, intermediary liability, and security practices.</li>
+      <li>Consumer Protection Act, 2019: Ensures transparency and fair practice in digital services.</li>
+      <li>Copyright & Intellectual Property Laws: Protect website content and prevent unauthorized reproduction.</li>
+      <li>E-commerce & Online Service Rules, 2020: Ensures accurate product/service information, refunds, and ethical digital practices.</li>
+      <li>Intermediary Guidelines & Digital Media Ethics Code, 2021: Mandates grievance redressal and timely removal of harmful content.</li>
+    </ul>
+  </div>
 
-<h2>...Thank You...</h2>
-<div class="section-content">
-  Be Safe. Be Secure.
-  <br><br>
-  We appreciate your understanding and responsible use of our resources. Your trust and safety are important to us.
-</div>
+  <h2>Latest Digital Law & Compliance</h2>
+  <div class="section-content">
+    <p><strong>Important Updates:</strong> The Digital Personal Data Protection Act, 2023 is the latest legislation governing online privacy, consent, and user data security in India.</p>
+    <ul>
+      <li>Mandates explicit user consent for data collection and processing.</li>
+      <li>Requires grievance redressal mechanisms for users.</li>
+      <li>Penalties for non-compliance can be substantial (up to ₹5 crore or 2% of global turnover).</li>
+      <li>Applies to all online platforms collecting, storing, or processing personal data of Indian users.</li>
+      <li>Website users should understand their rights under this law and use the website responsibly.</li>
+    </ul>
+  </div>
+  <h2>Data Collection & User Consent</h2>
+  <div class="section-content">
+    <p>We do not collect personal data unless voluntarily provided by the user.</p>
+    <p><strong>Details:</strong> Any personal information collected is used solely for the purpose it was provided and is not shared with third parties without explicit consent.</p>
+    <p><strong>Legal Reference:</strong> This practice aligns with the Digital Personal Data Protection Act, 2023, emphasizing the need for user consent in data collection.</p>
+   <p><strong>THANX</strong>
+    <p>BE SAFE</p>
+  </div>
 
-<!-- Disclaimer Section End -->
-
-  <!-- NEW CONTENT END -->
-
+    <!-- Other Disclaimer Sections same as previous code -->
+  </div>
 </main>
 
 </body>
