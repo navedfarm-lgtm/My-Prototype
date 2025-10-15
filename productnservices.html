@@ -3,270 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product & Services - XYZ Pvt Ltd</title>
+  <title>Products & Services - XYZ Pvt Ltd</title>
+  <meta name="description" content="Explore Products & Services offered by XYZ Pvt Ltd including AI tools, downloads, and updates.">
+  <meta name="keywords" content="XYZ Pvt Ltd, Products, Services, AI Tools, Digital Portal">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --black-bg:#000;
-      --white-text:#fff;
-      --base-font: clamp(14px, 2vw, 18px);
-      --heading-font: clamp(22px, 3vw, 36px);
-      --subheading-font: clamp(18px, 2.5vw, 28px);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin:0; padding:0;
-      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg);
-      color:var(--white-text);
-      line-height:1.6;
-      text-align:center;
-      font-size:var(--base-font);
-    }
-    header { text-align:center; padding:10px 2%; }
-    header img.logo {
-      max-width:clamp(150px,15vw,250px);
-      width:40%; height:auto;
-      margin-bottom:10px;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    header .tagline {
-      font-size: clamp(12px, 2vw, 20px);
-      font-weight:600;
-      letter-spacing:0.15em;
-      color: rgba(255,255,255,0.95);
-      margin-bottom:15px;
-      text-transform: uppercase;
-      text-shadow: 
-        0 0 5px rgba(255,255,255,0.8),
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 15px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.5);
-    }
-    nav {
-      display:flex; justify-content:center;
-      gap:clamp(10px,2vw,20px); flex-wrap:wrap;
-      margin-bottom:20px;
-    }
-    nav a {
-      text-decoration:none; color:var(--white-text);
-      padding:5px 10px; border-radius:4px;
-      font-size:var(--base-font);
-      background:rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-    nav a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-    .mobile-nav { display:none; }
-    .mobile-nav > div { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:10px; }
-    .mobile-nav button {
-      display:block; width:140px; padding:10px 14px;
-      background: rgba(255,255,255,0.05);
-      color: var(--white-text); border:none; border-radius:50% / 25%;
-      cursor:pointer; transition: all 0.3s ease; text-transform:uppercase;
-      font-size:var(--base-font);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav button.hover-active {
-      background: rgba(255,255,255,0.1); color:#000;
-      box-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 12px rgba(255,255,255,0.3) inset;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-    .mobile-nav .menu-links {
-      max-height:0; overflow:hidden; flex-direction:column; margin-top:10px; gap:8px;
-      background: rgba(30,30,30,0.95);
-      box-shadow:0 4px 10px rgba(0,0,0,0.4); border-radius:6px;
-      transition:max-height 0.3s ease, background 0.3s ease;
-      padding:0 5px;
-    }
-    .mobile-nav .menu-links.active { max-height:500px; }
-    .mobile-nav .menu-links a {
-      display:block; color:var(--white-text); background: rgba(255,255,255,0.05);
-      padding:5px 10px; border-radius:4px; text-decoration:none;
-      transition: all 0.3s ease; font-size: var(--base-font);
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav .menu-links a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-      50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
-      100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-    }
-    .mobile-nav button:active,.mobile-nav .menu-links a:active { transform:scale(0.97); }
-    @media (max-width:768px){
-      nav{display:none;}
-      .mobile-nav{display:flex;flex-direction:column;align-items:center;}
-      .mobile-nav button{font-size:calc(var(--base-font)-1px);}
-      .mobile-nav .menu-links a{font-size:calc(var(--base-font)+1px);}
-    }
-    main { max-width:900px; margin:20px auto; padding:0 15px; text-align:center; }
-    h1 { font-size:var(--heading-font); margin:15px 0; }
-    h2 { font-size:var(--subheading-font); margin:15px 0; }
-    p { font-size:var(--base-font); margin:10px 0; line-height:1.6; }
-    .section-content { margin-bottom:30px; text-align:center; }
-  </style>
 </head>
 <body>
+  <!-- Header Section -->
+  <header>
+    <img src="logo.png" alt="XYZ Logo" class="logo">
+    <div class="tagline">A No.1 All In One Digital Portal</div>
 
-<header>
-  <img src="logo.png" alt="XYZ Logo" class="logo">
-  <div class="tagline">Product & Services</div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="productnservices.html">Product & Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="download.html">Download</a>
-    <a href="webblogupdates.html">Web Blog & Updates</a>
-    <a href="privacypolicy.html">Privacy & Policy</a>
-    <a href="termncondition.html">Term & Condition</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </nav>
-
-  <div class="mobile-nav">
-    <div>
-      <button onclick="location.href='index.html'">Home</button>
-      <button id="menuButton">Menu</button>
-    </div>
-    <div class="menu-links" id="mobileMenuLinks">
+    <nav>
       <a href="index.html">Home</a>
-      <a href="productnservices.html">Product & Services</a>
+      <a href="productnservices.html" class="active">Product & Services</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="download.html">Download</a>
       <a href="webblogupdates.html">Web Blog & Updates</a>
       <a href="privacypolicy.html">Privacy & Policy</a>
-      <a href="termncondition.html">Term & Condition</a>
+      <a href="termncondition.html">Terms & Conditions</a>
       <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <div>
+        <button onclick="location.href='index.html'">Home</button>
+        <button id="menuButton">Menu</button>
+      </div>
+      <div class="menu-links" id="mobileMenuLinks">
+        <a href="index.html">Home</a>
+        <a href="productnservices.html">Product & Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="download.html">Download</a>
+        <a href="webblogupdates.html">Web Blog & Updates</a>
+        <a href="privacypolicy.html">Privacy & Policy</a>
+        <a href="termncondition.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <h1>Our Products & Services</h1>
-  
-  <div>
-    <h2>The learning & Earning's</h2>
-    <div class="section-content">
-      Work from home | Freelancing | Online courses & tutorials | Skill development | Business & entrepreneurship ideas | How to make money online | Earning apps & tools
-    </div>
-  </div>
+  <!-- Main Content -->
+  <main>
+    <h1>Products & Services</h1>
+    <p class="section-content">
+      Explore our wide range of digital services and tools designed to make your workflow faster, smarter, and more efficient. All services are free and easily accessible.
+    </p>
 
-  <div>
-    <h2>Finance & Business</h2>
-    <div class="section-content">
-      Personal finance | Investments & stock market | Cryptocurrency | Banking & loans | Online business & startups
-    </div>
-  </div>
+    <section>
+      <h2>AI Tools</h2>
+      <div class="section-content">
+        <ul style="list-style-type:none; padding:0;">
+          <li>🤖 AI Writing Assistant</li>
+          <li>📝 Grammar & Spell Checker</li>
+          <li>📄 Text Summarization Tool</li>
+          <li>🖋️ Content Generation & Creativity Tools</li>
+        </ul>
+      </div>
+    </section>
 
-  <div>
-    <h2>Careers & Jobs</h2>
-    <div class="section-content">
-      Job listings | Career advice & growth | Resume & interview tips | Internships & opportunities
-    </div>
-  </div>
+    <section>
+      <h2>Downloads</h2>
+      <div class="section-content">
+        <ul style="list-style-type:none; padding:0;">
+          <li>📥 Free Templates & Resources</li>
+          <li>💻 Software Updates & Tools</li>
+          <li>📚 Educational & Informational Materials</li>
+        </ul>
+      </div>
+    </section>
 
-  <div>
-    <h2>Software & Apps</h2>
-    <div class="section-content">
-      Productivity tools | Utility apps | AI tools & software | Mobile & desktop applications
-    </div>
-  </div>
+    <section>
+      <h2>Web Blog & Updates</h2>
+      <div class="section-content">
+        <p>
+          Stay informed with the latest news, tips, and insights from the digital world. Our blog provides updates on AI tools, learning resources, and technology trends.
+        </p>
+        <a href="webblogupdates.html" style="color:#fff; text-decoration:underline;">Visit Blog & Updates</a>
+      </div>
+    </section>
 
-  <div>
-    <h2>Technology & AI</h2>
-    <div class="section-content">
-      Gadgets & reviews | AI tools & innovations | Tech news & trends | Software development & coding
-    </div>
-  </div>
+    <section>
+      <h2>Contact for Services</h2>
+      <div class="section-content">
+        <p>
+          For specific queries or support regarding any product or service, contact us directly at:
+          <br>📧 <a href="mailto:xyz@gmail.com" style="color:#fff; text-decoration:underline;">xyz@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
 
-  <div>
-    <h2>Health & Wellness</h2>
-    <div class="section-content">
-      Fitness & exercise | Nutrition & diet tips | Mental health | Medical news & updates
-    </div>
-  </div>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 
-  <div>
-    <h2>Education & Learning</h2>
-    <div class="section-content">
-      Schools & colleges | Online courses & certifications | Tutorials & guides | Educational blogs & resources
-    </div>
-  </div>
-
-  <div>
-    <h2>Government Services</h2>
-    <div class="section-content">
-      Forms & applications | Schemes & subsidies | Official announcements | Citizen services
-    </div>
-  </div>
-
-  <div>
-    <h2>Entertainment & Lifestyle</h2>
-    <div class="section-content">
-      Movies & TV shows | Music & podcasts | Fashion & lifestyle trends | Gaming
-    </div>
-  </div>
-
-  <div>
-    <h2>Social Media & Networking</h2>
-    <div class="section-content">
-      Platforms & apps | Tips & trends | Influencer updates
-    </div>
-  </div>
-
-  <div>
-    <h2>Shopping & Deals</h2>
-    <div class="section-content">
-      E-commerce platforms | Discounts & coupons | Product reviews & recommendations
-    </div>
-  </div>
-
-  <div>
-    <h2>Travel & Tourism</h2>
-    <div class="section-content">
-      Destinations & guides | Travel tips & bookings | Adventure & experiences
-    </div>
-  </div>
-
-  <div>
-    <h2>Food & Recipes</h2>
-    <div class="section-content">
-      Cooking tips & recipes | Healthy eating | Restaurants & reviews
-    </div>
-  </div>
-
-  <div>
-    <h2>Ideas & Inspiration</h2>
-    <div class="section-content">
-      Creative projects | Startups & entrepreneurship | Motivation & success stories
-    </div>
-  </div>
-& Many More....................
-</main>
-
-<script>
-const menuButton = document.getElementById('menuButton');
-const menuLinks = document.getElementById('mobileMenuLinks');
-
-menuButton.addEventListener('click', function(e){
-  e.stopPropagation();
-  menuLinks.classList.toggle('active');
-  menuButton.classList.toggle('hover-active');
-});
-
-document.addEventListener('click', function(){
-  menuLinks.classList.remove('active');
-  menuButton.classList.remove('hover-active');
-});
-
-menuLinks.addEventListener('click', function(e){
-  e.stopPropagation();
-});
-</script>
 
 </body>
 </html>

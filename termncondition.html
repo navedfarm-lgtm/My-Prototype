@@ -3,118 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Term & Condition - XYZ Pvt Ltd</title>
+  <title>Terms & Conditions - XYZ Pvt Ltd</title>
+  <meta name="description" content="Terms & Conditions of XYZ Pvt Ltd website. Guidelines for use, liability, intellectual property, and governing law.">
+  <meta name="keywords" content="Terms, Conditions, XYZ Pvt Ltd, Legal, Website Use, AI Tools">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --black-bg:#000;
-      --white-text:#fff;
-      --base-font: clamp(14px, 2vw, 18px);
-      --heading-font: clamp(22px, 3vw, 36px);
-      --subheading-font: clamp(18px, 2.5vw, 28px);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin:0; padding:0;
-      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg);
-      color:var(--white-text);
-      line-height:1.6;
-      text-align:center;
-      font-size:var(--base-font);
-    }
-    header { text-align:center; padding:10px 2%; }
-    header img.logo {
-      max-width:clamp(150px,15vw,250px);
-      width:40%; height:auto;
-      margin-bottom:10px;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    header .tagline {
-      font-size: clamp(12px, 2vw, 20px);
-      font-weight:600;
-      letter-spacing:0.15em;
-      color: rgba(255,255,255,0.95);
-      margin-bottom:15px;
-      text-transform: uppercase;
-      text-shadow: 
-        0 0 5px rgba(255,255,255,0.8),
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 15px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.5);
-    }
-    nav {
-      display:flex; justify-content:center;
-      gap:clamp(10px,2vw,20px); flex-wrap:wrap;
-      margin-bottom:20px;
-    }
-    nav a {
-      text-decoration:none; color:var(--white-text);
-      padding:5px 10px; border-radius:4px;
-      font-size:var(--base-font);
-      background:rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-    nav a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-    .mobile-nav { display:none; }
-    .mobile-nav > div { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:10px; }
-    .mobile-nav button {
-      display:block; width:140px; padding:10px 14px;
-      background: rgba(255,255,255,0.05);
-      color: var(--white-text); border:none; border-radius:50% / 25%;
-      cursor:pointer; transition: all 0.3s ease; text-transform:uppercase;
-      font-size:var(--base-font);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav button.hover-active {
-      background: rgba(255,255,255,0.1); color:#000;
-      box-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 12px rgba(255,255,255,0.3) inset;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-    .mobile-nav .menu-links {
-      max-height:0; overflow:hidden; flex-direction:column; margin-top:10px; gap:8px;
-      background: rgba(30,30,30,0.95);
-      box-shadow:0 4px 10px rgba(0,0,0,0.4); border-radius:6px;
-      transition:max-height 0.3s ease, background 0.3s ease;
-      padding:0 5px;
-    }
-    .mobile-nav .menu-links.active { max-height:500px; }
-    .mobile-nav .menu-links a {
-      display:block; color:var(--white-text); background: rgba(255,255,255,0.05);
-      padding:5px 10px; border-radius:4px; text-decoration:none;
-      transition: all 0.3s ease; font-size: var(--base-font);
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav .menu-links a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-      50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
-      100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-    }
-    .mobile-nav button:active,.mobile-nav .menu-links a:active { transform:scale(0.97); }
-    @media (max-width:768px){
-      nav{display:none;}
-      .mobile-nav{display:flex;flex-direction:column;align-items:center;}
-      .mobile-nav button{font-size:calc(var(--base-font)-1px);}
-      .mobile-nav .menu-links a{font-size:calc(var(--base-font)+1px);}
-    }
-    main {
-      max-width:900px; margin:20px auto; padding:0 15px; text-align:center;
-    }
-    h1 { font-size:var(--heading-font); margin:15px 0; }
-    h2 { font-size:var(--subheading-font); margin:15px 0; }
-    p { font-size:var(--base-font); margin:10px 0; line-height:1.6; }
-    .section-content { margin-bottom:30px; text-align:center; }
-  </style>
 </head>
 <body>
-
 <header>
   <img src="logo.png" alt="XYZ Logo" class="logo">
-  <div class="tagline">Term & Condition</div>
+  <div class="tagline">A No.1 All In One Digital Portal</div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="productnservices.html">Product & Services</a>
@@ -123,9 +22,10 @@
     <a href="download.html">Download</a>
     <a href="webblogupdates.html">Web Blog & Updates</a>
     <a href="privacypolicy.html">Privacy & Policy</a>
-    <a href="termncondition.html">Term & Condition</a>
+    <a href="termncondition.html" class="active">Terms & Conditions</a>
     <a href="disclaimer.html">Disclaimer</a>
   </nav>
+
   <div class="mobile-nav">
     <div>
       <button onclick="location.href='index.html'">Home</button>
@@ -139,7 +39,7 @@
       <a href="download.html">Download</a>
       <a href="webblogupdates.html">Web Blog & Updates</a>
       <a href="privacypolicy.html">Privacy & Policy</a>
-      <a href="termncondition.html">Term & Condition</a>
+      <a href="termncondition.html">Terms & Conditions</a>
       <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
@@ -147,65 +47,88 @@
 
 <main>
   <h1>Terms & Conditions</h1>
-  <p class="section-content">Please read these terms and conditions carefully before using the XYZ Pvt Ltd website.</p>
 
-  <div>
-    <h2> Acceptance of Terms</h2>
-    <div class="section-content">By accessing and using this website, you accept and agree to be bound by these terms and conditions.</div>
-  </div>
+  <section>
+    <h2>Acceptance of Terms</h2>
+    <div class="section-content">
+      By using this website, you agree to comply with these Terms & Conditions. 
+      Continued use constitutes acceptance of any modifications. Discontinue use if you disagree.
+    </div>
+  </section>
 
-  <div>
-    <h2> Use of Website</h2>
-    <div class="section-content">You agree to use the website only for lawful purposes and not to engage in any activity that may harm the website or its users.</div>
-  </div>
+  <section>
+    <h2>Use of Website</h2>
+    <div class="section-content">
+      Use this website only for lawful purposes. Do not:
+      <ul>
+        <li>Disrupt website functionality or security.</li>
+        <li>Misuse AI-generated content for illegal or harmful purposes.</li>
+        <li>Copy or distribute proprietary material without permission.</li>
+      </ul>
+    </div>
+  </section>
 
-  <div>
-    <h2> Intellectual Property</h2>
-    <div class="section-content">All content, logos, graphics, and software on this website are the property of XYZ Pvt Ltd and protected by copyright laws.</div>
-  </div>
+  <section>
+    <h2>Intellectual Property</h2>
+    <div class="section-content">
+      All content, including text, code, software, graphics, and logos, are the property of XYZ Pvt Ltd. 
+      Unauthorized use may result in legal action.
+    </div>
+  </section>
 
-  <div>
-    <h2> Limitation of Liability</h2>
-    <div class="section-content">XYZ Pvt Ltd shall not be held responsible for any direct or indirect damages arising from the use of this website.</div>
-  </div>
+  <section>
+    <h2>Limitation of Liability</h2>
+    <div class="section-content">
+      XYZ Pvt Ltd is not liable for direct, indirect, or consequential damages arising from:
+      <ul>
+        <li>Errors in AI-generated content or website materials.</li>
+        <li>Interruption or unavailability of website services.</li>
+        <li>Loss of data or reliance on website content.</li>
+      </ul>
+      Services are provided “as-is.”
+    </div>
+  </section>
 
-  <div>
-    <h2> Privacy Policy</h2>
-    <div class="section-content">Please refer to our Privacy & Policy page for information on how your data is collected and used.</div>
-  </div>
+  <section>
+    <h2>Advertising & Third-Party Links</h2>
+    <div class="section-content">
+      We may display ads via Google AdSense and include third-party links. 
+      We do not endorse or control third-party content. Users interact at their own risk.
+    </div>
+  </section>
 
-  <div>
-    <h2> Modifications</h2>
-    <div class="section-content">XYZ Pvt Ltd reserves the right to modify these terms at any time without prior notice. Continued use constitutes acceptance of changes.</div>
-  </div>
+  <section>
+    <h2>Privacy Policy</h2>
+    <div class="section-content">
+      Please see our <a href="privacypolicy.html">Privacy Policy</a> for details on data collection and protection.
+    </div>
+  </section>
 
-  <div>
-    <h2> Governing Law</h2>
-    <div class="section-content">These terms and conditions are governed by and construed in accordance with the laws of India.</div>
-  </div>
-  <h2>THANX</h2>
-   BE ALERT BE SECURE BE SAFE
+  <section>
+    <h2>Modifications</h2>
+    <div class="section-content">
+      Terms may be updated at any time. Updates will be posted on this page. Continued use indicates acceptance.
+    </div>
+  </section>
+
+  <section>
+    <h2>Governing Law</h2>
+    <div class="section-content">
+      These Terms are governed by Indian law. Disputes fall under the exclusive jurisdiction of courts in New Delhi, India.
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Information</h2>
+    <div class="section-content">
+      For questions or complaints: 📧 <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>
+    </div>
+  </section>
 </main>
 
-<script>
-const menuButton = document.getElementById('menuButton');
-const menuLinks = document.getElementById('mobileMenuLinks');
 
-menuButton.addEventListener('click', function(e){
-  e.stopPropagation();
-  menuLinks.classList.toggle('active');
-  menuButton.classList.toggle('hover-active');
-});
+<script src="script.js"></script>
 
-document.addEventListener('click', function(){
-  menuLinks.classList.remove('active');
-  menuButton.classList.remove('hover-active');
-});
-
-menuLinks.addEventListener('click', function(e){
-  e.stopPropagation();
-});
-</script>
 
 </body>
 </html>

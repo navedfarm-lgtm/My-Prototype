@@ -4,135 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disclaimer - XYZ Pvt Ltd</title>
+  <meta name="description" content="Website Disclaimer for XYZ Pvt Ltd. Information about content, liability, fraudulent websites, and ethical use.">
+  <meta name="keywords" content="Disclaimer, XYZ Pvt Ltd, AI Tools, Liability, Fraud, Legal">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --black-bg:#000;
-      --white-text:#fff;
-      --base-font: clamp(14px, 2vw, 18px);
-      --heading-font: clamp(22px, 3vw, 36px);
-      --subheading-font: clamp(18px, 2.5vw, 28px);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin:0; padding:0;
-      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg);
-      color:var(--white-text);
-      line-height:1.6;
-      text-align:center;
-      font-size:var(--base-font);
-    }
-
-    header { text-align:center; padding:10px 2%; }
-
-    header img.logo {
-      max-width:clamp(150px,15vw,250px);
-      width:40%; height:auto;
-      margin-bottom:10px;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    header .tagline {
-      font-size: clamp(12px, 2vw, 20px);
-      font-weight: 600;                  
-      letter-spacing: 0.15em;            
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 15px;
-      text-transform: uppercase;         
-      text-shadow: 
-        0 0 5px rgba(255,255,255,0.8),
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 15px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.5);
-    }
-
-    nav {
-      display:flex; 
-      justify-content:center;
-      gap:clamp(10px,2vw,20px);
-      flex-wrap:wrap; 
-      margin-bottom:20px;
-    }
-
-    nav a {
-      text-decoration:none; 
-      color:var(--white-text);
-      padding:5px 10px; 
-      border-radius:4px;
-      font-size:var(--base-font);
-      background:rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      color:#000;
-      background:#fff;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-
-    .mobile-nav { display:none; }
-    .mobile-nav > div { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:10px; }
-    .mobile-nav button {
-      display:block; width:140px; padding:10px 14px;
-      background: rgba(255,255,255,0.05);
-      color: var(--white-text); border:none; border-radius:50% / 25%;
-      cursor:pointer; transition: all 0.3s ease; text-transform:uppercase;
-      font-size:var(--base-font);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav button.hover-active {
-      background: rgba(255,255,255,0.1); color:#000;
-      box-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 12px rgba(255,255,255,0.3) inset;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-    .mobile-nav .menu-links {
-      max-height:0; overflow:hidden; flex-direction:column; margin-top:10px; gap:8px;
-      background: rgba(30,30,30,0.95);
-      box-shadow:0 4px 10px rgba(0,0,0,0.4); border-radius:6px;
-      transition:max-height 0.3s ease, background 0.3s ease;
-      padding:0 5px;
-    }
-    .mobile-nav .menu-links.active { max-height:500px; }
-    .mobile-nav .menu-links a {
-      display:block; color:var(--white-text); background: rgba(255,255,255,0.05);
-      padding:5px 10px; border-radius:4px; text-decoration:none;
-      transition: all 0.3s ease; font-size: var(--base-font);
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav .menu-links a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-      50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); }
-      100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
-    }
-
-    .mobile-nav button:active,.mobile-nav .menu-links a:active { transform:scale(0.97); }
-
-    @media (max-width:768px){
-      nav{display:none;}
-      .mobile-nav{display:flex;flex-direction:column;align-items:center;}
-      .mobile-nav button{font-size:calc(var(--base-font)-1px);}
-      .mobile-nav .menu-links a{font-size:calc(var(--base-font)+1px);}
-    }
-
-    main { max-width:900px; margin:20px auto; padding:0 15px; text-align:center; }
-    h1 { font-size:var(--heading-font); margin:15px 0; text-align:center; }
-    h2 { font-size:var(--subheading-font); margin:15px 0; text-align:center; }
-    .section-content { font-size:var(--base-font); margin-bottom:40px; text-align:center; }
-  </style>
 </head>
 <body>
 
 <header>
   <img src="logo.png" alt="XYZ Logo" class="logo">
-  <div class="tagline">Disclaimer</div>
+  <div class="tagline">A No.1 All In One Digital Portal</div>
 
   <nav>
     <a href="index.html">Home</a>
@@ -142,8 +23,8 @@
     <a href="download.html">Download</a>
     <a href="webblogupdates.html">Web Blog & Updates</a>
     <a href="privacypolicy.html">Privacy & Policy</a>
-    <a href="termncondition.html">Term & Condition</a>
-    <a href="disclaimer.html">Disclaimer</a>
+    <a href="termncondition.html">Terms & Conditions</a>
+    <a href="disclaimer.html" class="active">Disclaimer</a>
   </nav>
 
   <div class="mobile-nav">
@@ -159,7 +40,7 @@
       <a href="download.html">Download</a>
       <a href="webblogupdates.html">Web Blog & Updates</a>
       <a href="privacypolicy.html">Privacy & Policy</a>
-      <a href="termncondition.html">Term & Condition</a>
+      <a href="termncondition.html">Terms & Conditions</a>
       <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
@@ -167,97 +48,68 @@
 
 <main>
   <h1>Website Disclaimer</h1>
-
-  <div>
-    <h2>⚠️ Disclaimer</h2>
+  <section>
+    <h2>General Disclaimer</h2>
     <div class="section-content">
-  
-All services and resources provided on this website are completely free of charge.
+      All services, AI tools, and content are free for general educational purposes only.  
+      No premium or paid services are authorized. Fraudulent offers via WhatsApp, Telegram, email, or SMS are not endorsed.  
+      Users are not required to provide personal information. All content is “as-is”.
+    </div>
+  </section>
 
-
-We do not accept any form of payment for our services.
-
-We do not offer paid services via Telegram channels, phone calls to customers, or through any promotional offers via SMS or email links.
-
-No sign-up or registration is required to access our core resources.
-<div>
-    <h2>Aware of fraudulent websites</h2>
+  <section>
+    <h2>Awareness of Fraudulent Websites</h2>
     <div class="section-content">
-      This is our sole and official website. We do not operate any other website under the same or a similar name.
-
-If you see any unethical conduct or suspicious links claiming to be associated with us, please verify first and immediately contact us at our official email address: xyz@gmail.com.
-
-
-Personal information is not collected unless it is voluntarily and knowingly provided by the user.
-
-The website owners and affiliates are not liable for any direct, indirect, incidental, or consequential damages arising from the use of this website or its resources.
-for any query write to us : xyz@gmail.com.
-
+      <strong>www.xyzpvtltd.com</strong> is the official website.  
+      We are not responsible for third-party websites or content. Report fraudulent websites at: <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>.
     </div>
-  </div>
+  </section>
 
- 
-
-
-    </div>
-  </div>
-
-  <div>
+  <section>
     <h2>Non-Affiliation Statement</h2>
     <div class="section-content">
-      The website is not affiliated with any government, agency, private organization, or company unless explicitly stated.
+      XYZ Pvt Ltd is not affiliated with any government or private organization unless explicitly stated.
     </div>
-  </div>
+  </section>
 
-  <div>
+  <section>
     <h2>Limitation of Liability</h2>
     <div class="section-content">
-      Errors, omissions, or inaccuracies in content, loss of data, or reliance on third-party information are at user discretion.
+      XYZ Pvt Ltd is not liable for:
+      <ul>
+        <li>Loss from reliance on content or AI-generated materials</li>
+        <li>Technical issues, downtime, or data loss</li>
+        <li>Errors or outdated information</li>
+      </ul>
+      Users should verify content before use.
     </div>
-  </div>
+  </section>
 
-  <div>
-    <h2>Updates to This Policy</h2>
-    <div class="section-content">
-      Any updates will be posted on the site; continued use constitutes acceptance.
-    </div>
-  </div>
-
-  <div>
+  <section>
     <h2>User Responsibility & Ethical Awareness</h2>
     <div class="section-content">
-      Users must use services responsibly, ethically, and legally.
+      Users must access and use this website responsibly.  
+      AI tools should not be misused for illegal, harmful, or misleading content.
     </div>
-  </div>
-<h2>THANX</h2>
-BE ALERT BE SECURE BE SAFE
+  </section>
 
+  <section>
+    <h2>Updates to This Disclaimer</h2>
+    <div class="section-content">
+      Updates may occur at any time. Continued use constitutes acceptance.
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Information</h2>
+    <div class="section-content">
+      Report misuse or fraud: 📧 <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>
+    </div>
+  </section>
 </main>
 
-<script>
-const menuButton = document.getElementById('menuButton');
-const menuLinks = document.getElementById('mobileMenuLinks');
+<script src="script.js"></script>
 
-menuButton.addEventListener('click', function(e){
-  e.stopPropagation();
-  if(menuLinks.classList.contains('active')){
-    menuLinks.classList.remove('active');
-    menuButton.classList.remove('hover-active');
-  } else {
-    menuLinks.classList.add('active');
-    menuButton.classList.add('hover-active');
-  }
-});
-
-document.addEventListener('click', function(){
-  menuLinks.classList.remove('active');
-  menuButton.classList.remove('hover-active');
-});
-
-menuLinks.addEventListener('click', function(e){
-  e.stopPropagation();
-});
-</script>
 
 </body>
 </html>

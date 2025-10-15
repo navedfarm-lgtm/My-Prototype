@@ -1,197 +1,90 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - XYZ Pvt Ltd</title>
+  <meta name="description" content="XYZ Pvt Ltd - A No.1 All-in-One Digital Portal offering AI tools, downloads, and updates.">
+  <meta name="keywords" content="XYZ Pvt Ltd, AI Tools, Downloads, Digital Portal">
+
+  <!-- ✅ CSS files must always be inside <head> -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --black-bg:#000;
-      --white-text:#fff;
-      --base-font: clamp(14px, 2vw, 18px);
-      --heading-font: clamp(22px, 3vw, 36px);
-      --subheading-font: clamp(18px, 2.5vw, 28px);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin:0; padding:0;
-      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg);
-      color:var(--white-text);
-      line-height:1.6;
-      text-align:center;
-      font-size:var(--base-font);
-    }
-    header {
-      text-align:center;
-      padding:10px 2%;
-    }
-    header img.logo {
-      max-width:clamp(150px,15vw,250px);
-      width:40%;
-      height:auto;
-      margin-bottom:10px;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    header .tagline {
-      font-size: clamp(12px, 2vw, 20px);
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-shadow: 
-        0 0 5px rgba(255,255,255,0.8),
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 15px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.5);
-    }
-    nav {
-      display:flex; 
-      justify-content:center;
-      gap:clamp(10px,2vw,20px);
-      flex-wrap:wrap; 
-      margin-bottom:20px;
-    }
-    nav a {
-      text-decoration:none; 
-      color:var(--white-text);
-      padding:5px 10px; 
-      border-radius:4px;
-      font-size:var(--base-font);
-      background:rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-    nav a:hover {
-      color:#000;
-      background:#fff;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-    .mobile-nav { display:none; }
-    .mobile-nav > div { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:10px; }
-    .mobile-nav button {
-      display:block;
-      width:140px;
-      padding:10px 14px;
-      background: rgba(255,255,255,0.05);
-      color: var(--white-text);
-      border:none;
-      border-radius: 50% / 25%;
-      cursor:pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      font-size: var(--base-font);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
-      text-shadow:0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav button.hover-active {
-      background: rgba(255,255,255,0.1);
-      color:#000;
-      box-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 12px rgba(255,255,255,0.3) inset;
-      animation: glowPulse 1s ease-in-out infinite alternate;
-    }
-    .mobile-nav .menu-links {
-      max-height:0;
-      overflow:hidden;
-      flex-direction:column;
-      margin-top:10px;
-      gap:8px;
-      background: rgba(30,30,30,0.95);
-      box-shadow:0 4px 10px rgba(0,0,0,0.4);
-      border-radius:6px;
-      transition: max-height 0.3s ease, background 0.3s ease;
-      padding:0 5px;
-    }
-    .mobile-nav .menu-links.active { max-height:500px; }
-    .mobile-nav .menu-links a { display:block; color:var(--white-text); background: rgba(255,255,255,0.05); padding:5px 10px; border-radius:4px; text-decoration:none; transition: all 0.3s ease; font-size: var(--base-font); text-shadow:0 0 2px rgba(255,255,255,0.5);}
-    .mobile-nav .menu-links a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-
-    @keyframes glowPulse { 0%{box-shadow:0 0 5px rgba(255,255,255,0.5);} 50%{box-shadow:0 0 12px rgba(255,255,255,0.8);} 100%{box-shadow:0 0 5px rgba(255,255,255,0.5);} }
-    .mobile-nav button:active, .mobile-nav .menu-links a:active { transform: scale(0.97); }
-
-    @media (max-width:768px){
-      nav { display:none; }
-      .mobile-nav { display:flex; flex-direction:column; align-items:center; }
-      .mobile-nav button { font-size: calc(var(--base-font) - 1px); }
-      .mobile-nav .menu-links a { font-size: calc(var(--base-font) + 1px); }
-    }
-
-    main { max-width:900px; margin:20px auto; padding:0 15px; text-align:center; }
-    h1 { font-size: var(--heading-font); margin:15px 0; text-align:center; }
-    h2 { font-size: var(--subheading-font); margin:5px 0 20px; text-align:center; font-weight:normal; opacity:0.85; }
-    p { font-size: var(--base-font); line-height:1.6; margin-bottom:15px; text-align:center; }
-  </style>
 </head>
 <body>
+  <!-- Header Section -->
+  <header>
+    <img src="logo.png" alt="XYZ Logo" class="logo">
+    <div class="tagline">A No.1 All In One Digital Portal</div>
 
-<header>
-  <img src="logo.png" alt="XYZ Logo" class="logo">
-  <div class="tagline">A No.1 All In One Digital Portal</div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="productnservices.html">Product & Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="download.html">Download</a>
-    <a href="webblogupdates.html">Web Blog & Updates</a>
-    <a href="privacypolicy.html">Privacy & Policy</a>
-    <a href="termncondition.html">Term & Condition</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </nav>
-
-  <div class="mobile-nav">
-    <div>
-      <button onclick="location.href='index.html'">Home</button>
-      <button id="menuButton">Menu</button>
-    </div>
-    <div class="menu-links" id="mobileMenuLinks">
-      <a href="index.html">Home</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
       <a href="productnservices.html">Product & Services</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="download.html">Download</a>
       <a href="webblogupdates.html">Web Blog & Updates</a>
       <a href="privacypolicy.html">Privacy & Policy</a>
-      <a href="termncondition.html">Term & Condition</a>
+      <a href="termncondition.html">Terms & Conditions</a>
       <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <div>
+        <button onclick="location.href='index.html'">Home</button>
+        <button id="menuButton">Menu</button>
+      </div>
+      <div class="menu-links" id="mobileMenuLinks">
+        <a href="index.html">Home</a>
+        <a href="productnservices.html">Product & Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="download.html">Download</a>
+        <a href="webblogupdates.html">Web Blog & Updates</a>
+        <a href="privacypolicy.html">Privacy & Policy</a>
+        <a href="termncondition.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <h1>Welcome to XYZ Pvt Ltd</h1>
-  <h2>Your one-stop portal for online services & information</h2>
-  <p>
-    We provide fast, reliable, and easy access to essential online services and information 
-    for people worldwide. By offering intuitive, step-by-step guidance, we make it simple 
-    for anyone to find and use.
-  </p>
-</main>
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to XYZ Pvt Ltd</h1>
+    <p class="section-content">
+      Your one-stop digital portal offering AI-powered tools for writing, summarization, grammar-checking, and more. All services are free and accessible without registration.
+    </p>
 
-<script>
-const menuButton = document.getElementById('menuButton');
-const menuLinks = document.getElementById('mobileMenuLinks');
+    <section>
+      <h2>Our Services</h2>
+      <div class="section-content">
+        <ul style="list-style-type:none; padding:0;">
+          <li>✅ AI Writing Tools</li>
+          <li>✅ Grammar & Spell Check</li>
+          <li>✅ Summarization & Content Creation</li>
+          <li>✅ Free Downloads & Updates</li>
+          <li>✅ Web Blog & Latest Updates</li>
+        </ul>
+      </div>
+    </section>
 
-menuButton.addEventListener('click', function(e){
-  e.stopPropagation();
-  menuLinks.classList.toggle('active');
-  menuButton.classList.toggle('hover-active');
-});
+    <section>
+      <h2>Get Started</h2>
+      <div class="section-content">
+        <p>Click on the menu above to explore our products, services, and resources. No sign-up required to access core tools.</p>
+      </div>
+    </section>
 
-document.addEventListener('click', function(){
-  menuLinks.classList.remove('active');
-  menuButton.classList.remove('hover-active');
-});
+    <section>
+      <h2>Contact Us</h2>
+      <div class="section-content">
+        <p>For any questions, reach out to us at: 📧 <a href="mailto:xyz@gmail.com" style="color:#fff; text-decoration:underline;">xyz@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
 
-menuLinks.addEventListener('click', function(e){
-  e.stopPropagation();
-});
-</script>
+  <script src="script.js"></script> 
 
 </body>
 </html>

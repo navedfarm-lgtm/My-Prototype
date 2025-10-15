@@ -1,375 +1,108 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - XYZ Pvt Ltd</title>
+  <meta name="description" content="Learn more about XYZ Pvt Ltd, our mission, vision, and the team behind our AI tools and digital services.">
+  <meta name="keywords" content="XYZ Pvt Ltd, About, Mission, Vision, Team, Digital Portal">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --black-bg:#000;
-      --white-text:#fff;
-      --base-font: clamp(14px, 2vw, 18px);
-      --heading-font: clamp(22px, 3vw, 36px);
-      --subheading-font: clamp(18px, 2.5vw, 28px);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin:0; padding:0;
-      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:var(--black-bg);
-      color:var(--white-text);
-      line-height:1.6;
-      text-align:center;
-      font-size:var(--base-font);
-    }
-
-    header { text-align:center; padding:10px 2%; }
-
-    header img.logo {
-      max-width:clamp(150px,15vw,250px);
-      width:40%; height:auto;
-      margin-bottom:10px;
-      display:block;
-      margin-left:auto; margin-right:auto;
-    }
-
-    header .tagline {
-      font-size: clamp(12px, 2vw, 20px);
-      font-weight: 600;                  
-      letter-spacing: 0.15em;            
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 15px;
-      text-transform: uppercase;         
-      text-shadow: 
-        0 0 5px rgba(255,255,255,0.8),
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 15px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.5);
-    }
-
-    nav { display:flex; justify-content:center; gap:clamp(10px,2vw,20px); flex-wrap:wrap; margin-bottom:20px; }
-    nav a { text-decoration:none; color:var(--white-text); padding:5px 10px; border-radius:4px; font-size:var(--base-font); background:rgba(255,255,255,0.05); transition: all 0.3s ease; }
-    nav a:hover { color:#000; background:#fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-
-    .mobile-nav { display:none; }
-    .mobile-nav > div { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .mobile-nav button {
-      display: block; width: 140px; padding: 10px 14px;
-      background: rgba(255,255,255,0.05); color: var(--white-text);
-      border: none; border-radius: 50% / 25%; cursor: pointer;
-      transition: all 0.3s ease; text-transform: uppercase;
-      font-size: var(--base-font);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3) inset;
-      text-shadow: 0 0 2px rgba(255,255,255,0.5);
-    }
-    .mobile-nav button.hover-active { background: rgba(255,255,255,0.1); color: #000; box-shadow:0 0 6px rgba(255,255,255,0.4),0 0 12px rgba(255,255,255,0.3) inset; animation: glowPulse 1s ease-in-out infinite alternate; }
-
-    .mobile-nav .menu-links {
-      max-height: 0; overflow: hidden; flex-direction: column; margin-top: 10px; gap: 8px;
-      background: rgba(30,30,30,0.95); box-shadow: 0 4px 10px rgba(0,0,0,0.4); border-radius: 6px;
-      transition: max-height 0.3s ease, background 0.3s ease; padding: 0 5px;
-    }
-    .mobile-nav .menu-links.active { max-height: 500px; }
-    .mobile-nav .menu-links a { display:block; color:var(--white-text); background: rgba(255,255,255,0.05); padding:5px 10px; border-radius:4px; text-decoration:none; transition: all 0.3s ease; font-size: var(--base-font); text-shadow: 0 0 2px rgba(255,255,255,0.5); }
-    .mobile-nav .menu-links a:hover { color: #000; background: #fff; animation: glowPulse 1s ease-in-out infinite alternate; }
-
-    @keyframes glowPulse { 0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); } 50% { box-shadow: 0 0 12px rgba(255,255,255,0.8); } 100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); } }
-
-    .mobile-nav button:active, .mobile-nav .menu-links a:active { transform: scale(0.97); }
-
-    @media (max-width: 768px) {
-      nav { display:none; }
-      .mobile-nav { display:flex; flex-direction:column; align-items:center; }
-      .mobile-nav button { font-size: calc(var(--base-font) - 1px); }
-      .mobile-nav .menu-links a { font-size: calc(var(--base-font) + 1px); }
-    }
-
-    main { max-width:900px; margin:20px auto; padding:0 15px; text-align:center; }
-    h1 { font-size: var(--heading-font); margin:15px 0; } 
-    h2 { font-size: var(--subheading-font); margin:15px 0; }
-    p { font-size: var(--base-font); margin:10px 0; }
-    .section-content { margin-bottom: 40px; }
-
-    .social-icons img { width:30px; height:30px; margin:0 5px; filter: invert(1); transition: transform 0.3s ease, filter 0.3s ease; } 
-    .social-icons a:hover img { transform: scale(1.2); filter: invert(0) drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff); }
-
-    .download-logo, .disclaimer-logo { width:120px; height:auto; margin: 15px 0; }
-
-  </style>
 </head>
 <body>
+  <!-- Header Section -->
+  <header>
+    <img src="logo.png" alt="XYZ Logo" class="logo">
+    <div class="tagline">A No.1 All In One Digital Portal</div>
 
-<header>
-  <img src="logo.png" alt="XYZ Logo" class="logo">
-  <div class="tagline">About</div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="productnservices.html">Product & Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="download.html">Download</a>
-    <a href="webblogupdates.html">Web Blog & Updates</a>
-    <a href="privacypolicy.html">Privacy & Policy</a>
-    <a href="termncondition.html">Term & Condition</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </nav>
-
-  <div class="mobile-nav">
-    <div>
-      <button onclick="location.href='index.html'">Home</button>
-      <button id="menuButton">Menu</button>
-    </div>
-    <div class="menu-links" id="mobileMenuLinks">
+    <nav>
       <a href="index.html">Home</a>
       <a href="productnservices.html">Product & Services</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
       <a href="download.html">Download</a>
       <a href="webblogupdates.html">Web Blog & Updates</a>
       <a href="privacypolicy.html">Privacy & Policy</a>
-      <a href="termncondition.html">Term & Condition</a>
+      <a href="termncondition.html">Terms & Conditions</a>
       <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <div>
+        <button onclick="location.href='index.html'">Home</button>
+        <button id="menuButton">Menu</button>
+      </div>
+      <div class="menu-links" id="mobileMenuLinks">
+        <a href="index.html">Home</a>
+        <a href="productnservices.html">Product & Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="download.html">Download</a>
+        <a href="webblogupdates.html">Web Blog & Updates</a>
+        <a href="privacypolicy.html">Privacy & Policy</a>
+        <a href="termncondition.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<script>
-const menuButton = document.getElementById('menuButton');
-const menuLinks = document.getElementById('mobileMenuLinks');
+  <!-- Main Content -->
+  <main>
+    <h1>About XYZ Pvt Ltd</h1>
+    <p class="section-content">
+      XYZ Pvt Ltd is a leading digital portal dedicated to providing innovative AI tools, educational resources, and a wide array of online services.  
+      Our goal is to empower individuals, students, and professionals with accessible and cutting-edge technology solutions.
+    </p>
 
-menuButton.addEventListener('click', function(e){
-  e.stopPropagation();
-  menuLinks.classList.toggle('active');
-  menuButton.classList.toggle('hover-active');
-});
+    <section>
+      <h2>Our Mission</h2>
+      <div class="section-content">
+        <p>
+          Our mission is to simplify digital workflows and make AI-driven tools available to everyone for free.  
+          We aim to bridge the gap between technology and accessibility while maintaining the highest standards of reliability and security.
+        </p>
+      </div>
+    </section>
 
-document.addEventListener('click', function(){
-  menuLinks.classList.remove('active');
-  menuButton.classList.remove('hover-active');
-});
+    <section>
+      <h2>Our Vision</h2>
+      <div class="section-content">
+        <p>
+          To become the most trusted all-in-one digital portal where users can access AI tools, learning resources, updates, and downloads, all in one safe and secure platform.
+        </p>
+      </div>
+    </section>
 
-menuLinks.addEventListener('click', function(e){
-  e.stopPropagation();
-});
-</script>
+    <section>
+      <h2>The Team</h2>
+      <div class="section-content">
+        <p>
+          Our team is composed of experts in AI, software development, education, and digital content creation.  
+          We work passionately to ensure that our users have a seamless, safe, and innovative experience on our platform.
+        </p>
+        <p>
+          📧 For any inquiries or team contact: <a href="mailto:xyz@gmail.com" style="color:#fff; text-decoration:underline;">xyz@gmail.com</a>
+        </p>
+      </div>
+    </section>
 
-<main>
-  <!-- Updated Content -->
-  <h1>Website Overview & Vision</h1>
-  <div class="section-content">
-    <p><em>"Information is Key to Success"</em></p>
-    <p>Our aim is to provide free, all-in-one digital services and information with clear, step-by-step guidance for everyone—children, adults, students, women, and seniors. This one-stop platform offers fast, reliable, and easy access to essential online resources, making it simple for anyone, anywhere to find and use the services they need.</p>
-  </div>
+    <section>
+      <h2>Why Choose Us?</h2>
+      <div class="section-content">
+        <ul style="list-style-type:none; padding:0;">
+          <li>✅ Free and easy access to AI-powered tools.</li>
+          <li>✅ Secure and reliable platform with no hidden charges.</li>
+          <li>✅ Constant updates and improvements to meet user needs.</li>
+          <li>✅ Supportive and ethical approach to digital services.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-  <h2>Online Earning & Learning</h2>
-  <div class="section-content">
-    Work from home | Freelancing | Online courses & tutorials | Skill development | Business & entrepreneurship ideas | How to make money online | Earning apps & tools
-  </div>
-
-  <h2>Finance & Business</h2>
-  <div class="section-content">
-    Personal finance | Investments & stock market | Cryptocurrency | Banking & loans | Online business & startups
-  </div>
-
-  <h2>Careers & Jobs</h2>
-  <div class="section-content">
-    Job listings | Career advice & growth | Resume & interview tips | Internships & opportunities
-  </div>
-
-  <h2>Software & Apps</h2>
-  <div class="section-content">
-    Productivity tools | Utility apps | AI tools & software | Mobile & desktop applications
-  </div>
-
-  <h2>Technology & AI</h2>
-  <div class="section-content">
-    Gadgets & reviews | AI tools & innovations | Tech news & trends | Software development & coding
-  </div>
-
-  <h2>News & Updates</h2>
-  <div class="section-content">
-    National & international news | Business & finance news | Technology & science news | Health & lifestyle news
-  </div>
-
-  <h2>Health & Wellness</h2>
-  <div class="section-content">
-    Fitness & exercise | Nutrition & diet tips | Mental health | Medical news & updates
-  </div>
-
-  <h2>Education & Learning</h2>
-  <div class="section-content">
-    Schools & colleges | Online courses & certifications | Tutorials & guides | Educational blogs & resources
-  </div>
-
-  <h2>Government Services</h2>
-  <div class="section-content">
-    Forms & applications | Schemes & subsidies | Official announcements | Citizen services
-  </div>
-
-  <h2>Entertainment & Lifestyle</h2>
-  <div class="section-content">
-    Movies & TV shows | Music & podcasts | Fashion & lifestyle trends | Gaming
-  </div>
-
-  <h2>Blogs & Insights</h2>
-  <div class="section-content">
-    Personal blogs | Industry insights | Opinion pieces & guides
-  </div>
-
-  <h2>Social Media & Networking</h2>
-  <div class="section-content">
-    Platforms & apps | Tips & trends | Influencer updates
-  </div>
-
-  <h2>Shopping & Deals</h2>
-  <div class="section-content">
-    E-commerce platforms | Discounts & coupons | Product reviews & recommendations
-  </div>
-
-  <h2>Travel & Tourism</h2>
-  <div class="section-content">
-    Destinations & guides | Travel tips & bookings | Adventure & experiences
-  </div>
-
-  <h2>Food & Recipes</h2>
-  <div class="section-content">
-    Cooking tips & recipes | Healthy eating | Restaurants & reviews
-  </div>
-
-  <h2>Ideas & Inspiration</h2>
-  <div class="section-content">
-    Creative projects | Startups & entrepreneurship | Motivation & success stories
-  </div>
-
-  <h2>Our Vision</h2>
-  <div class="section-content">
-    Our vision is to empower users by making digital information and services universally accessible, practical, and easy to navigate—all from a single platform.
-  </div>
-
-  <h2>Download & Share</h2>
-  <div class="section-content">
-    <img src="logo.png" alt="XYZ Logo" class="download-logo">
-    <p>Download the XYZ App<br>Install now and enjoy free access to all our digital services.</p>
-    <p>Share with friends:</p>
-    <div class="social-icons">
-      <a href="https://wa.me/?text=Check%20out%20this%20website" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"></a>
-      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
-      <a href="https://twitter.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter/X"></a>
-      <a href="https://www.youtube.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
-      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://www.linkedin.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
-      <a href="https://telegram.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram"></a>
-    </div>
-    <p>📧 Contact: xyz@gmail.com<br>📍 Address: Maharashtra, India</p>
-    <p>Privacy Policy</p>
-    <p>🛡️ © 2025 Xyz Pvt Ltd. All Rights Reserved.<br>[Your Company Name]<br>Design & Web Development by M.D. Naved</p>
-  </div>
-
-  <!-- Disclaimer Section -->
-  <div style="text-align:center; margin-top: 40px;">
-    <img src="logo.png" alt="XYZ Logo" class="disclaimer-logo">
-    <h2>⚠️ Disclaimer</h2>
-    <h2>Effective Date</h2>
-    <div class="section-content">[Insert Date]</div>
-    <h2>Non-Affiliation Statement</h2>
-    <div class="section-content">
-      We are not affiliated with, sponsored by, or partnered with any government, agency, private organization, or company, unless explicitly stated.
-      <br><br>
-      <strong>Details:</strong> Any logos, trademarks, or references used on this website are for informational purposes only and do not imply endorsement. Users should independently verify affiliations before relying on the content.
-      <br><br>
-      <strong>Legal Note:</strong> Misrepresentation of affiliation or endorsement is a violation of trademark and intellectual property laws under the <em>Trade Marks Act, 1999 (India)</em> and related international regulations.
-    </div>
-    <!-- Free Services & Data Protection Section -->
-<h2>Free Services & Data Protection</h2>
-<div class="section-content">
-  <p>All services and resources on this website are provided free of charge. We do not collect personally identifiable information (PII) unless voluntarily provided.</p>
-
-  <p><strong>Details:</strong> Optional forms or subscriptions collect minimal data solely for service improvements. Your data is never sold, shared, or used for marketing without consent. Standard security measures are applied to protect any submitted information.</p>
-
-  <p><strong>Legal & Regulatory Reference:</strong> Data collection and processing comply with the Digital Personal Data Protection Act, 2023, Information Technology (IT) Act, 2000, IT Rules, 2011, and other government-issued privacy guidelines. Users have the right to access, correct, or delete personal data.</p>
-
-  <h2>Information Accuracy & Use</h2>
-  <div class="section-content">
-    <p>Content is for general informational purposes only. All efforts are made to ensure accuracy, but no guarantees regarding completeness or timeliness are provided.</p>
-    <p><strong>Details:</strong> Users must independently verify critical information before relying on it. This website does not provide professional, medical, legal, or financial advice. Use of content is entirely at your own risk.</p>
-    <p><strong>Legal Note:</strong> Reliance on website content is governed by the Consumer Protection Act, 2019 and other relevant laws. Users are encouraged to seek professional guidance when needed.</p>
-  </div>
-
-  <h2>External Links & Third-Party Content</h2>
-  <div class="section-content">
-    <p>Links may direct users to external websites, third-party services, or partner content.</p>
-    <p><strong>Details:</strong> We do not control or endorse external content. Users should review the privacy policies, terms of use, and safety measures of any external websites visited.</p>
-    <p><strong>Legal Reference:</strong> Our liability for third-party content is limited under IT Act, 2000, Section 79, which protects intermediaries when due diligence is followed.</p>
-  </div>
-
-  <h2>User Responsibility & Ethical Awareness</h2>
-  <div class="section-content">
-    <p>Users must use all services, downloads, or resources responsibly, ethically, and legally.</p>
-    <p><strong>Details:</strong> Misuse, illegal activity, or unethical behavior using the site’s resources is the sole responsibility of the user. Users should act in a safe, informed, and respectful manner.</p>
-    <p><strong>Legal Reference:</strong> Users must comply with IT Act, 2000, Copyright Act, 1957, and other applicable Indian laws. Unauthorized activity may result in civil or criminal penalties.</p>
-  </div>
-
-  <h2>User Agreement</h2>
-  <div class="section-content">
-    <p>Accessing and using this website constitutes agreement to all terms and policies outlined here.</p>
-    <p><strong>Details:</strong> If you do not agree with these terms, refrain from using the website. Compliance with local laws and regulations is the responsibility of the user.</p>
-    <p><strong>Legal Note:</strong> This agreement incorporates IT Act, 2000, Copyright Act, 1957, Digital Personal Data Protection Act, 2023, and general digital governance laws. Legal enforcement may occur if terms are violated.</p>
-  </div>
-
-  <h2>Limitation of Liability</h2>
-  <div class="section-content">
-    <p>The owners, operators, and affiliates of this website are not liable for any direct, indirect, incidental, or consequential damages arising from use.</p>
-    <p><strong>Details:</strong> This includes errors, omissions, or inaccuracies in content, loss of data, or reliance on third-party information. Use at your own discretion.</p>
-    <p><strong>Legal Reference:</strong> Liability limitations are governed by IT Act, 2000 and general contract and tort laws.</p>
-  </div>
-
-  <h2>Updates to This Policy</h2>
-  <div class="section-content">
-    <p>Policy updates and changes will be posted on this page. Continued use of the website constitutes acceptance of updated terms.</p>
-    <p><strong>Details:</strong> Users should periodically review this section to remain informed about modifications to data handling, disclaimers, or service provisions.</p>
-    <p><strong>Legal Note:</strong> Transparency and updates are in accordance with IT Rules, 2011 and consumer protection regulations.</p>
-  </div>
-
-  <h2>Digital Law & Data Privacy Guidelines</h2>
-  <div class="section-content">
-    <p><strong>Scope:</strong> Highlights key digital laws and privacy rules applicable to website users.</p>
-    <ul>
-      <li>Digital Personal Data Protection Act, 2023: Governs collection, storage, processing, and sharing of personal data with user consent.</li>
-      <li>IT Act, 2000 & IT Rules, 2011: Covers electronic communication, intermediary liability, and security practices.</li>
-      <li>Consumer Protection Act, 2019: Ensures transparency and fair practice in digital services.</li>
-      <li>Copyright & Intellectual Property Laws: Protect website content and prevent unauthorized reproduction.</li>
-      <li>E-commerce & Online Service Rules, 2020: Ensures accurate product/service information, refunds, and ethical digital practices.</li>
-      <li>Intermediary Guidelines & Digital Media Ethics Code, 2021: Mandates grievance redressal and timely removal of harmful content.</li>
-    </ul>
-  </div>
-
-  <h2>Latest Digital Law & Compliance</h2>
-  <div class="section-content">
-    <p><strong>Important Updates:</strong> The Digital Personal Data Protection Act, 2023 is the latest legislation governing online privacy, consent, and user data security in India.</p>
-    <ul>
-      <li>Mandates explicit user consent for data collection and processing.</li>
-      <li>Requires grievance redressal mechanisms for users.</li>
-      <li>Penalties for non-compliance can be substantial (up to ₹5 crore or 2% of global turnover).</li>
-      <li>Applies to all online platforms collecting, storing, or processing personal data of Indian users.</li>
-      <li>Website users should understand their rights under this law and use the website responsibly.</li>
-    </ul>
-  </div>
-  <h2>Data Collection & User Consent</h2>
-  <div class="section-content">
-    <p>We do not collect personal data unless voluntarily provided by the user.</p>
-    <p><strong>Details:</strong> Any personal information collected is used solely for the purpose it was provided and is not shared with third parties without explicit consent.</p>
-    <p><strong>Legal Reference:</strong> This practice aligns with the Digital Personal Data Protection Act, 2023, emphasizing the need for user consent in data collection.</p>
-   <p><strong>THANX</strong>
-    <p>BE SAFE</p>
-  </div>
-
-    <!-- Other Disclaimer Sections same as previous code -->
-  </div>
-</main>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+<
 
 </body>
 </html>
